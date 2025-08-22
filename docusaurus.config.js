@@ -30,6 +30,7 @@ const config = {
   organizationName: 'seb73701', // Usually your GitHub org/user name.
   projectName: 'doc-it', // Usually your repo name.
   trailingSlash: false,
+  noIndex: true, // Par défaut, `false`
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -90,6 +91,11 @@ const config = {
           hideable: true,
           autoCollapseCategories: true,
         },
+      },
+      colorMode: {
+        defaultMode: 'dark',
+        disableSwitch: false,
+        respectPrefersColorScheme: true,
       },
       navbar: {
         title: 'Doc-IT',
