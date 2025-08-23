@@ -46,6 +46,9 @@ const config = {
   markdown: {
     mermaid: true,
   },
+  plugins: [[ require.resolve('docusaurus-lunr-search'), {
+      languages: ['fr'] // language codes
+    }]],
 
   presets: [
     [
@@ -56,8 +59,11 @@ const config = {
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          //editUrl:
+          //  'https://github.com/seb73701/doc-it/edit/main/',
+          lastVersion: "current",
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
         },
         blog: {
           showReadingTime: true,
@@ -67,8 +73,8 @@ const config = {
           },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          //editUrl:
+          //  'https://github.com/seb73701/doc-it/edit/main/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -103,6 +109,7 @@ const config = {
           alt: 'Doc-IT Logo',
           src: 'img/logo.png',
         },
+        hideOnScroll: false,
         items: [
           {
             type: 'docSidebar',
@@ -120,6 +127,10 @@ const config = {
             label: 'GitHub',
             position: 'right',
           },
+          //{
+          //  type: 'search',
+          //  position: 'right',
+          //},
         ],
       },
       footer: {

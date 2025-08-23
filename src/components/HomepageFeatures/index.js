@@ -8,8 +8,7 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Articles dédiés aux applications.
       </>
     ),
   },
@@ -18,8 +17,7 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Articles sur les base de données SQL et NoSQL. Les méthodologies comme Merise et UML.
       </>
     ),
   },
@@ -28,8 +26,7 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Articles sur l'intelligence artificielle, Machine Learning, NLP, DataScience, etc.
       </>
     ),
   },
@@ -38,8 +35,7 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Articles sur le scripting et le développement web, sans oublier les méthodologies Agile, Scrum, UX, etc.
       </>
     ),
   },
@@ -48,8 +44,7 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Articles sur les systèmes d'exploitation que ce soit sur des distributions Linux, MacOS ou bien Windows.
       </>
     ),
   },
@@ -58,8 +53,106 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Articles sur le réseau (routeur, switch, firewall, load-balancer, etc.).
+      </>
+    ),
+  },
+  {
+    title: 'BigData',
+    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    description: (
+      <>
+        Articles sur le BigData.
+      </>
+    ),
+  },
+  {
+    title: 'Cloud Computing',
+    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    description: (
+      <>
+        Articles sur le Cloud Computing (AWS, Azure, GCP, etc.).
+      </>
+    ),
+  },
+  {
+    title: 'DevOps',
+    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    description: (
+      <>
+        Articles sur le DevOps.
+      </>
+    ),
+  },
+  {
+    title: 'IoT',
+    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    description: (
+      <>
+        Articles sur IoT (ChromeCast, Alexia, etc.).
+      </>
+    ),
+  },
+  {
+    title: 'Jeux Vidéos',
+    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    description: (
+      <>
+        Articles sur le domaine des Jeux Vidéos.
+      </>
+    ),
+  },
+  {
+    title: 'Raspberry Pi',
+    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    description: (
+      <>
+        Articles sur le Raspberry Pi et ce qui est possible de faire avec...
+      </>
+    ),
+  },
+  {
+    title: 'Réseaux sociaux',
+    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    description: (
+      <>
+        Articles sur les réseaux sociaux (Facebook, X, Instagram, Youtube, LinkedIn, etc.).
+      </>
+    ),
+  },
+  {
+    title: 'Sécurité',
+    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    description: (
+      <>
+        Articles sur la sécurité (certificats SSL, hardening, scan de vulnérabilités, etc.).
+      </>
+    ),
+  },
+  {
+    title: 'Streaming',
+    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    description: (
+      <>
+        Articles sur le Streaming (Disney+, Amazon Prime, Netflix, Spotify, etc.).
+      </>
+    ),
+  },
+  {
+    title: 'Supervision',
+    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    description: (
+      <>
+        Articles sur la supervision et sur l'observabilité (Icinga2, Zabbix, Nagios, Grafana, Prometheus, etc).
+      </>
+    ),
+  },
+  {
+    title: 'Virtualisation',
+    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    description: (
+      <>
+        Articles sur la virtualisation et la conteneurisation (VMware, VirtualBox, Vagrant, Docker, Kubernetes, etc).
       </>
     ),
   },
