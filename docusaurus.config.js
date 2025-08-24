@@ -46,9 +46,6 @@ const config = {
   markdown: {
     mermaid: true,
   },
-  plugins: [[ require.resolve('docusaurus-lunr-search'), {
-      languages: ['fr'] // language codes
-    }]],
 
   presets: [
     [
@@ -117,10 +114,6 @@ const config = {
             position: 'left',
             label: 'Documentation',
           },
-          {
-            type: 'search',
-            position: 'right',
-          },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/seb73701',
@@ -184,6 +177,42 @@ const config = {
         defaultLanguage: 'bash',
         additionalLanguages: ['powershell','apacheconf','asciidoc','awk','bash','batch','csp','csv','diff','dns-zone-file','docker','git','http','hsts','ignore','ini','jq','keepalived','log','markup-templating','mermaid','mongodb','nginx','perl','php','plant-uml','plsql','promql','properties','puppet','regex','rest','ruby','shell-session','sql','systemd','toml','typescript','typoscript','uri','vim','wiki'],
       },
+      
+      algolia: {
+        // The application ID provided by Algolia
+        appId: 'W9GPCKB4F5',
+
+        // Public API key: it is safe to commit it
+        apiKey: '44ab87135ac89ea8d7016b695b95ec92',
+
+        indexName: 'doc-it',
+
+        // Optional: see doc section below
+        contextualSearch: true,
+
+        // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+        externalUrlRegex: 'external\\.com|domain\\.com',
+
+        // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
+        replaceSearchResultPathname: {
+          from: '/docs/', // or as RegExp: /\/docs\//
+          to: '/',
+        },
+
+        // Optional: Algolia search parameters
+        searchParameters: {},
+
+        // Optional: path for search page that enabled by default (`false` to disable it)
+        searchPagePath: 'search',
+
+        // Optional: whether the insights feature is enabled or not on Docsearch (`false` by default)
+        insights: false,
+
+        //... other Algolia params
+      },
+    metadata: [{
+      name: 'algolia-site-verification', content: 'D84608699D932756'
+    }],
     }),
 };
 
