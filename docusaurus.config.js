@@ -30,7 +30,7 @@ const config = {
   organizationName: 'seb73701', // Usually your GitHub org/user name.
   projectName: 'doc-it', // Usually your repo name.
   trailingSlash: false,
-  noIndex: true, // Par défaut, `false`
+  noIndex: false, // Par défaut, `false`
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
