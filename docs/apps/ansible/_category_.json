@@ -1,0 +1,9 @@
+{
+  "label": "Ansible",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Ansible est une plateforme logicielle libre pour la configuration et la gestion des ordinateurs. Elle combine le déploiement de logiciels (en) multinœuds, l'exécution des tâches ad-hoc et la gestion de configuration.",
+    "image": "/img/docusaurus.png",
+  }
+}

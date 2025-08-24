@@ -2,10 +2,11 @@ import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 
+
 const FeatureList = [
   {
     title: 'Applications',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('@site/static/img/laptop-svgrepo-com.svg').default,
     description: (
       <>
         Articles dédiés aux applications.
@@ -13,11 +14,11 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Base de données',
+    title: 'Bases de données',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Articles sur les base de données SQL et NoSQL. Les méthodologies comme Merise et UML.
+        Articles sur les bases de données SQL et NoSQL. Les méthodologies comme Merise et UML.
       </>
     ),
   },
@@ -41,7 +42,7 @@ const FeatureList = [
   },
   {
     title: 'Système d\'exploitation',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: require('@site/static/img/linux-svgrepo-com.svg').default,
     description: (
       <>
         Articles sur les systèmes d'exploitation que ce soit sur des distributions Linux, MacOS ou bien Windows.
@@ -50,7 +51,7 @@ const FeatureList = [
   },
   {
     title: 'Réseau',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/tech-ethernet-svgrepo-com.svg').default,
     description: (
       <>
         Articles sur le réseau (routeur, switch, firewall, load-balancer, etc.).
@@ -95,7 +96,7 @@ const FeatureList = [
   },
   {
     title: 'Jeux Vidéos',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/video-game-svgrepo-com.svg').default,
     description: (
       <>
         Articles sur le domaine des Jeux Vidéos.
@@ -104,7 +105,7 @@ const FeatureList = [
   },
   {
     title: 'Raspberry Pi',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/raspberry-pi-svgrepo-com.svg').default,
     description: (
       <>
         Articles sur le Raspberry Pi et ce qui est possible de faire avec...
