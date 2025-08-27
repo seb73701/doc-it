@@ -1,7 +1,5 @@
 ---
-title: Tuto 1
-description: Ansible est une plateforme logicielle libre pour la configuration et la gestion des ordinateurs.\
-    Elle combine le déploiement de logiciels (en) multinœuds, l'exécution des tâches ad-hoc et la gestion de configuration. 
+title: Ansible - Présentation
 hide_table_of_contents: true
 hide_title: false
 keywords:
@@ -9,14 +7,13 @@ keywords:
     - app
     - ansible
 tags: [ansible,automatisation,app,application]
+id: 1
 ---
 
-## <i class="fa-solid fa-hashtag"></i> Information
 
-![Logo](/img/apps/ansible/ansible_logo.svg)
+## Information
 
 <img style={{ width: "200px", margin: "5% 10% 5% 0%" }} alt="logo" src={require('@docusaurus/useBaseUrl').default('img/logo.png')} />
-
 
 
 > <i class="fa-solid fa-quote-left"></i> **Ansible** est une plate-forme logicielle libre pour la configuration et la gestion des ordinateurs. Elle combine le déploiement de logiciels multi-nœuds, l'exécution des tâches ad-hoc, et la gestion de configuration. Elle gère les différents nœuds à travers SSH et ne nécessite l'installation d'aucun logiciel supplémentaire sur ceux-ci. Les modules communiquent via la sortie standard en notation JSON et peuvent être écrits dans n'importe quel langage de programmation. Le système utilise YAML pour exprimer des descriptions réutilisables de systèmes, appelées playbook. <i class="fa-solid fa-quote-left fa-rotate-180"></i>

@@ -71,7 +71,7 @@ const config = {
           //editUrl:
           //  'https://github.com/seb73701/doc-it/edit/main/',
           lastVersion: "current",
-          showLastUpdateAuthor: true,
+          showLastUpdateAuthor: false,
           showLastUpdateTime: true,
         },
         blog: {

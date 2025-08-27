@@ -2,6 +2,16 @@ import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { library } from '@fortawesome/fontawesome-svg-core'
+
+/* import all the icons in Free Solid, Free Regular, and Brands styles */
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { far } from '@fortawesome/free-regular-svg-icons'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+
+library.add(fas, far, fab)
+
 
 const FeatureList = [
   {
@@ -182,6 +192,16 @@ export default function HomepageFeatures() {
             <Feature key={idx} {...props} />
           ))}
         </div>
+      </div>
+      <div>
+        <FontAwesomeIcon icon="fa-solid fa-dog" className={styles.textRed} />
+        <FontAwesomeIcon icon="fa-regular fa-circle-user" />
+        <FontAwesomeIcon icon="fa-brands fa-threads" />
+        <FontAwesomeIcon icon="fa-solid fa-bell" shake />
+        <span className="fa-layers fa-lg">
+          <FontAwesomeIcon icon="fa-solid fa-circle" style={{ color: "red" }} />
+          <FontAwesomeIcon icon="fa-solid fa-check" transform="shrink-6" inverse />
+        </span>
       </div>
     </section>
   );
