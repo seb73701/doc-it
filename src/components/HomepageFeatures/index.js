@@ -193,16 +193,6 @@ export default function HomepageFeatures() {
           ))}
         </div>
       </div>
-      <div>
-        <FontAwesomeIcon icon="fa-solid fa-dog" className={styles.textRed} />
-        <FontAwesomeIcon icon="fa-regular fa-circle-user" />
-        <FontAwesomeIcon icon="fa-brands fa-threads" />
-        <FontAwesomeIcon icon="fa-solid fa-bell" shake />
-        <span className="fa-layers fa-lg">
-          <FontAwesomeIcon icon="fa-solid fa-circle" style={{ color: "red" }} />
-          <FontAwesomeIcon icon="fa-solid fa-check" transform="shrink-6" inverse />
-        </span>
-      </div>
     </section>
   );
 }

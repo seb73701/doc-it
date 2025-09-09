@@ -10,7 +10,7 @@ keywords:
 tags: [os,commandes,linux,ls]
 ---
 
-## MAN
+## <i class="fa-solid fa-hashtag"></i> MAN
 
 - [ArchiLinux](https://man.archlinux.org/man/ls.1.fr)
 - [Debian](https://manpages.debian.org/bullseye/manpages-fr/ls.1.fr.html)
@@ -19,14 +19,14 @@ tags: [os,commandes,linux,ls]
 
 ----
 
-## INFORMATION
+## <i class="fa-solid fa-hashtag"></i> INFORMATION
 
 `ls` - Afficher le contenu de répertoires
 
 Des alias sont fréquemment positionnés au sein des distributions courantes dans le fichier `~/.bashrc`.
 C’est le cas de l’alias `ll` :
 
-Commande :
+<i class="fa-solid fa-terminal"></i> <span class="cmd-shell">Shell</span>
 
 ```shell
 alias ll='ls -l --color=auto'
@@ -34,7 +34,7 @@ alias ll='ls -l --color=auto'
 
 ou taper la commande :
 
-Commande :
+<i class="fa-solid fa-terminal"></i> <span class="cmd-shell">Shell</span>
 
 ```shell
 alias="ls -l"
@@ -44,23 +44,25 @@ En tapant la commande `ls`, l'affichage renverra comme si l'on avait taper la co
 
 Pour supprimer un alias ajouter, il suffit de taper :
 
-Commande :
+<i class="fa-solid fa-terminal"></i> <span class="cmd-shell">Shell</span>
 
 ```shell
 unalias ls
 ```
 
-## EXEMPLES
+## <i class="fa-solid fa-hashtag"></i> EXEMPLES
 
-### Description des colonnes générées par l'exécution de la commande `ls -lia`
+### <i class="fa-solid fa-hashtag"></i> Description des colonnes générées par l'exécution de la commande `ls -lia`
 
-Commande :
+<i class="fa-solid fa-terminal"></i> <span class="cmd-shell">Shell</span>
 
 ```shell
 ls -lia /home
 ```
 
-Sortie :
+<i class="fa-solid fa-ellipsis"></i>
+
+
 
 ```shell
 78489 drwx------ 4 rockstar rockstar 4096 25 oct. 08:10 rockstar
@@ -79,9 +81,9 @@ Sortie :
 
 ----
 
-### Lister les fichiers en ordre inversé (nom)
+### <i class="fa-solid fa-hashtag"></i> Lister les fichiers en ordre inversé (nom)
 
-Commande :
+<i class="fa-solid fa-terminal"></i> <span class="cmd-shell">Shell</span>
 
 ```shell
 ls -r
@@ -89,9 +91,9 @@ ls -r
 
 ----
 
-### Lister les fichiers cachés
+### <i class="fa-solid fa-hashtag"></i> Lister les fichiers cachés
 
-Commande :
+<i class="fa-solid fa-terminal"></i> <span class="cmd-shell">Shell</span>
 
 ```shell
 ls -a
@@ -99,15 +101,15 @@ ls -a
 
 ----
 
-### Lister les fichiers de `/etc` par ordre de dernière modification
+### <i class="fa-solid fa-hashtag"></i> Lister les fichiers de `/etc` par ordre de dernière modification
 
-Commande :
+<i class="fa-solid fa-terminal"></i> <span class="cmd-shell">Shell</span>
 
 ```shell
 ls -ltr /etc
 ```
 
-Sortie : 
+<i class="fa-solid fa-ellipsis"></i> 
 
 ```shell
 total 1332
@@ -122,17 +124,17 @@ total 1332
 
 ----
 
-### Lister les fichiers de `/var` plus gros qu’un méga-octet mais moins qu’un giga-octets
+### <i class="fa-solid fa-hashtag"></i> Lister les fichiers de `/var` plus gros qu’un méga-octet mais moins qu’un giga-octets
 
 L'exemple ici utilise des commandes avancées `grep` avec des expressions régulières.
 
-Commande :
+<i class="fa-solid fa-terminal"></i> <span class="cmd-shell">Shell</span>
 
 ```shell
 ls -lhR /var/ | grep ^\- | grep -E "[1-9]*\.[0-9]*M"
 ```
 
-Sortie :
+<i class="fa-solid fa-ellipsis"></i>
 
 ```shell
 ...
@@ -142,17 +144,17 @@ Sortie :
 
 ----
 
-### Afficher les droits sur un dossier
+### <i class="fa-solid fa-hashtag"></i> Afficher les droits sur un dossier
 
 Pour connaître les droits sur un dossier, dans notre exemple `/etc`, la commande suivante ne conviendrait pas :
 
-Commande :
+<i class="fa-solid fa-terminal"></i> <span class="cmd-shell">Shell</span>
 
 ```shell
 ls -l /etc
 ```
 
-Sortie :
+<i class="fa-solid fa-ellipsis"></i>
 
 ```shell
 total 1332
@@ -165,13 +167,13 @@ drwxr-xr-x.  2 root root   4096 17 nov.  17:48 alternatives
 
 La commande ci-dessus affichera par défaut le contenu du dossier. Pour le dossier lui-même, vous pouvez utiliser l'option `-d`.
 
-Commande :
+<i class="fa-solid fa-terminal"></i> <span class="cmd-shell">Shell</span>
 
 ```shell
 ls -ld /etc
 ```
 
-Sortie :
+<i class="fa-solid fa-ellipsis"></i>
 
 ```shell
 drwxr-xr-x. 69 root root 4096 18 nov.  17:05 /etc
@@ -179,9 +181,9 @@ drwxr-xr-x. 69 root root 4096 18 nov.  17:05 /etc
 
 ----
 
-### Trier par taille de fichier, la plus grande en premier
+### <i class="fa-solid fa-hashtag"></i> Trier par taille de fichier, la plus grande en premier
 
-Commande :
+<i class="fa-solid fa-terminal"></i> <span class="cmd-shell">Shell</span>
 
 ```shell
 ls -lhS
@@ -189,15 +191,15 @@ ls -lhS
 
 ----
 
-### Formater l'heure/date
+### <i class="fa-solid fa-hashtag"></i> Formater l'heure/date
 
-Commande :
+<i class="fa-solid fa-terminal"></i> <span class="cmd-shell">Shell</span>
 
 ```shell
 ls -l --time-style="+%Y-%m-%d %m-%d %H:%M" /
 ```
 
-Sortie :
+<i class="fa-solid fa-ellipsis"></i>
 
 ```shell
 total 12378
@@ -207,17 +209,17 @@ dr-xr-xr-x. 5 root root 1024 2014-11-23 11-23 05:29 boot
 
 ---
 
-### Ajouter le trailing slash à la fin des dossiers
+### <i class="fa-solid fa-hashtag"></i> Ajouter le trailing slash à la fin des dossiers
 
 Par défaut, la commande `ls` n’affiche pas le dernier slash d’un dossier. Dans certains cas, comme pour des scripts par exemple, il est utile de les afficher :
 
-Commande :
+<i class="fa-solid fa-terminal"></i> <span class="cmd-shell">Shell</span>
 
 ```shell
 ls -dF /etc
 ```
 
-Sortie :
+<i class="fa-solid fa-ellipsis"></i>
 
 ```shell
 /etc/
@@ -225,9 +227,9 @@ Sortie :
 
 ---
 
-### Masquer certaines extensions
+### <i class="fa-solid fa-hashtag"></i> Masquer certaines extensions
 
-Commande :
+<i class="fa-solid fa-terminal"></i> <span class="cmd-shell">Shell</span>
 
 ```shell
 ls /etc --hide=*.conf
@@ -235,9 +237,9 @@ ls /etc --hide=*.conf
 
 ----
 
-### Afficher les inodes
+### <i class="fa-solid fa-hashtag"></i> Afficher les inodes
 
-Commande :
+<i class="fa-solid fa-terminal"></i> <span class="cmd-shell">Shell</span>
 
 ```shell
 ls -i
@@ -245,15 +247,15 @@ ls -i
 
 ----
 
-### Afficher les propriétaires et les groupes en valeur numérique (par leur id, ici 0 et 0)
+### <i class="fa-solid fa-hashtag"></i> Afficher les propriétaires et les groupes en valeur numérique (par leur id, ici 0 et 0)
 
-Commande :
+<i class="fa-solid fa-terminal"></i> <span class="cmd-shell">Shell</span>
 
 ```shell
 ls -ln /boot |head
 ```
 
-Sortie :
+<i class="fa-solid fa-ellipsis"></i>
 
 ```shell
 total 126840
@@ -270,15 +272,15 @@ drwxr-xr-x 2 0 0     1024 févr. 11  2020 hd-media
 
 ----
 
-### Ne pas afficher les propriétaires (g) et/ou les groupes (G)
+### <i class="fa-solid fa-hashtag"></i> Ne pas afficher les propriétaires (g) et/ou les groupes (G)
 
-Commande :
+<i class="fa-solid fa-terminal"></i> <span class="cmd-shell">Shell</span>
 
 ```shell
 ls -lgG /boot |head
 ```
 
-Sortie :
+<i class="fa-solid fa-ellipsis"></i>
 
 ```shell
 total 126840
@@ -295,15 +297,15 @@ drwxr-xr-x 2     1024 févr. 11  2020 hd-media
 
 ----
 
-### Afficher les tailles en format adopté à l'humain (b=octets, K=2\*\*10, M=2\*\*20,G=2\*\*30)
+### <i class="fa-solid fa-hashtag"></i> Afficher les tailles en format adopté à l'humain (b=octets, K=2\*\*10, M=2\*\*20,G=2\*\*30)
 
-Commande :
+<i class="fa-solid fa-terminal"></i> <span class="cmd-shell">Shell</span>
 
 ```shell
 ls -lh /boot |head
 ```
 
-Sortie :
+<i class="fa-solid fa-ellipsis"></i>
 
 ```shell
 total 124M
@@ -320,15 +322,15 @@ drwxr-xr-x 2 root root 1,0K févr. 11  2020 hd-media
 
 ----
 
-### Afficher les tailles selon une unité fixe, puissance de 2 (K=2\*\*10, M=2\*\*20,G=2\*\*30)
+### <i class="fa-solid fa-hashtag"></i> Afficher les tailles selon une unité fixe, puissance de 2 (K=2\*\*10, M=2\*\*20,G=2\*\*30)
 
-Commande :
+<i class="fa-solid fa-terminal"></i> <span class="cmd-shell">Shell</span>
 
 ```shell
 ls -l --block=M /boot |head
 ```
 
-Sortie :
+<i class="fa-solid fa-ellipsis"></i>
 
 ```shell
 total 124M
@@ -345,15 +347,15 @@ drwxr-xr-x 2 root root  1M févr. 11  2020 hd-media
 
 ----
 
-### Afficher les tailles selon une unité fixe, puissance de 10 (KB,MB,GB)
+### <i class="fa-solid fa-hashtag"></i> Afficher les tailles selon une unité fixe, puissance de 10 (KB,MB,GB)
 
-Commande :
+<i class="fa-solid fa-terminal"></i> <span class="cmd-shell">Shell</span>
 
 ```shell
 ls -l --block=MB /boot |head
 ```
 
-Sortie :
+<i class="fa-solid fa-ellipsis"></i>
 
 ```shell
 total 130MB
@@ -370,19 +372,19 @@ drwxr-xr-x 2 root root  1MB févr. 11  2020 hd-media
 
 ----
 
-### Ajouter de la couleur dans `ls`
+### <i class="fa-solid fa-hashtag"></i> Ajouter de la couleur dans `ls`
 
-#### Mise en place
+#### <i class="fa-solid fa-hashtag"></i> Mise en place
 
 Editer le fichier `~/.bashrc` et y ajoutez :
 
-Commande :
+<i class="fa-solid fa-terminal"></i> <span class="cmd-shell">Shell</span>
 
 ```shell
 alias ls='ls --color'
 ```
 
-#### Code Couleur
+#### <i class="fa-solid fa-hashtag"></i> Code Couleur
 
 | Couleur | Signification |
 |:--------|:--------------|
@@ -394,11 +396,11 @@ alias ls='ls --color'
 | Rouge | Archive (.tar, .zip, .deb, .rpm) |
 | Vert | Exécutable |
 
-#### Personnalisation du code couleur
+#### <i class="fa-solid fa-hashtag"></i> Personnalisation du code couleur
 
 Il est possible de customiser les couleurs, lancer cette commande :
 
-Commande :
+<i class="fa-solid fa-terminal"></i> <span class="cmd-shell">Shell</span>
 
 ```shell
 dircolors -p > ~/.ls_couleur
@@ -408,7 +410,7 @@ dircolors -p > ~/.ls_couleur
 
 Editer le fichier `~/.bashrc` et ajouter la ligne :
 
-Commande :
+<i class="fa-solid fa-terminal"></i> <span class="cmd-shell">Shell</span>
 
 ```shell
 export LS_COLORS="/home/utilisateur/.ls_couleur"
@@ -416,13 +418,13 @@ export LS_COLORS="/home/utilisateur/.ls_couleur"
 
 Modifier le fichier :
 
-Commande :
+<i class="fa-solid fa-terminal"></i> <span class="cmd-shell">Shell</span>
 
 ```shell
 ~/.ls_couleur
 ```
 
-#### Modifier la couleur
+#### <i class="fa-solid fa-hashtag"></i> Modifier la couleur
 
 | Code | Signification | | Code | Couleur d'avant plan | | Code | Couleur d'arrière plan |
 |:----:|:--------------|:--|:---:|:--------------------|:--|:----:|:---------------------|
@@ -435,7 +437,7 @@ Commande :
 | | | | **36** | cyan | | **46** | cyan |
 | | | | **37** | blanc | | **47** | blanc |
 
-#### Signification des termes
+#### <i class="fa-solid fa-hashtag"></i> Signification des termes
 
 - `NORMAL` : il ne s'agit pas d'un type mais plus exactement de la valeur par défaut
 - `FILE` : fichier normal
@@ -448,7 +450,7 @@ Commande :
 - `ORPHAN` : lien symbolique orphelin (pointant vers un fichier inexistant)
 - `EXEC` : fichier possédant une permission d'exécution
 
-#### Exemples
+#### <i class="fa-solid fa-hashtag"></i> Exemples
 
 La ligne `DIR` signifie que le dossier est de couleur **bleu** et **gras**.
 
@@ -456,11 +458,11 @@ La ligne `DIR` signifie que le dossier est de couleur **bleu** et **gras**.
 DIR 01;34 # directory
 ```
 
-#### Activer les paramètres
+#### <i class="fa-solid fa-hashtag"></i> Activer les paramètres
 
 Dès que les modifications sont faites, taper la commande :
 
-Commande :
+<i class="fa-solid fa-terminal"></i> <span class="cmd-shell">Shell</span>
 
 ```shell
 eval `dircolors /home/utilisateur/.ls_couleur`
@@ -470,7 +472,7 @@ Bien sûr, pour prendre en compte ces choix à chaque démarrage, cette ligne de
 
 Si on veut que les modifications se fassent pour tous les utilisateurs, il faudra créer un fichier dans un dossier root par exemple `/etc/` et modifier comme ceci :
 
-Commande :
+<i class="fa-solid fa-terminal"></i> <span class="cmd-shell">Shell</span>
 
 ```shell
 dircolors -p > /etc/ls_couleur
@@ -485,17 +487,17 @@ eval `dircolors /etc/ls_couleur`
 
 Et mettre à jour le profile.
 
-Commande :
+<i class="fa-solid fa-terminal"></i> <span class="cmd-shell">Shell</span>
 
 ```shell
 source /etc/profile
 ```
 
-#### Tableau récapitulatif des codes couleurs
+#### <i class="fa-solid fa-hashtag"></i> Tableau récapitulatif des codes couleurs
 
 Créer un fichier texte :
 
-Commande :
+<i class="fa-solid fa-terminal"></i> <span class="cmd-shell">Shell</span>
 
 ```shell
 vim ~/code_couleurs.sh
@@ -521,7 +523,7 @@ done
 
 Ajouter le droit d'exécution :
 
-Commande :
+<i class="fa-solid fa-terminal"></i> <span class="cmd-shell">Shell</span>
 
 ```shell
 chmod +x ~/code_couleurs.sh
@@ -529,7 +531,7 @@ chmod +x ~/code_couleurs.sh
 
 Exécuter le script : 
 
-Commande :
+<i class="fa-solid fa-terminal"></i> <span class="cmd-shell">Shell</span>
 
 ```shell
 sh ~/code_couleurs.sh

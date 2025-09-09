@@ -9,10 +9,11 @@ keywords:
 tags: [os,commandes,linux]
 ---
 
-## Liste des commandes
+## <i class="fa-solid fa-hashtag"></i> Liste des commandes
 
-### Commandes de base
+### <i class="fa-solid fa-hashtag"></i> Commandes de base
 
 |Commande|Fonction|
 |:-------|:-------|
-|[ls](cmd/cmd_ls)|Permet de lister les dossiers et fichiers|
+|[`ls`](cmd/cmd_ls)|Permet de lister les dossiers et fichiers|
+
