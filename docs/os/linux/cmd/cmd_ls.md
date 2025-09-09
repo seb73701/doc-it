@@ -8,7 +8,6 @@ keywords:
     - linux
     - ls
 tags: [os,commandes,linux,ls]
-id: 1
 ---
 
 ## MAN

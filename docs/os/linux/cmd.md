@@ -7,7 +7,6 @@ keywords:
     - commandes
     - linux
 tags: [os,commandes,linux]
-id: 1
 ---
 
 ## Liste des commandes
@@ -16,4 +15,4 @@ id: 1
 
 |Commande|Fonction|
 |:-------|:-------|
-|[ls](./cmd/cmd_ls)|Permet de lister les dossiers et fichiers|
+|[ls](cmd/cmd_ls)|Permet de lister les dossiers et fichiers|
