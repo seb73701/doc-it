@@ -9,9 +9,9 @@ keywords:
 tags: [os,commandes,linux]
 ---
 
-## <i class="fa-solid fa-hashtag"></i> Liste des commandes
+## Liste des commandes
 
-### <i class="fa-solid fa-hashtag"></i> Commandes de base
+### Commandes de base
 
 |Commande|Fonction|
 |:-------|:-------|

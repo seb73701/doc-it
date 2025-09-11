@@ -97,3 +97,71 @@
     var(--ifm-color-emphasis-100) 100%
   );
 }
+
+i {
+  color: teal;
+}
+
+.cmd-shell {
+  font-style: italic;
+  color: lightslategray;
+}
+
+th {
+  color: teal;
+}
+
+code {
+  color: lightcoral;
+}
+
+h2::before, h3::before, h4::before {
+  content: "# ";
+  /* content: "\f152"; */
+  /* font-family: "Font Awesome 7 Free"; */
+  color: teal;
+
+}
+
+h1 {
+  color:coral;
+}
+
+h2, h3, h4 {
+  color:teal;
+}
+
+.code_language {
+  margin-top: 20px;
+  font-style: italic;
+  text-transform: lowercase;
+  color: grey;
+  text-align: right;
+  margin-left: 30px;
+  display: block;
+}
+
+.language-shell::before {
+  content: "\f120"; /* Code Unicode pour fa-terminal */
+  font-family: "Font Awesome 7 Free";
+  font-weight: 900;
+  display: block;
+  position: absolute;
+  top: -1.5em;
+  left: 0;
+  color: #5e6fae;
+  font-size: 1.2em;
+}
+
+.language-text::before {
+  content: "\e163"; /* Code Unicode pour fa-terminal */
+  font-family: "Font Awesome 7 Free";
+  font-weight: 900;
+  display: block;
+  position: absolute;
+  top: -1.5em;
+  left: 0;
+  color: lightsalmon;
+  font-size: 1.2em;
+}
+
