@@ -32,7 +32,7 @@ const config = {
   trailingSlash: false,
   noIndex: false, // Par défaut, `false`
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'log',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set

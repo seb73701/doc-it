@@ -131,18 +131,22 @@ h2, h3, h4 {
   color:teal;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 .code_language {
-  margin-top: 20px;
   font-style: italic;
   text-transform: lowercase;
   color: grey;
+  font-size: small;
   text-align: right;
   margin-left: 30px;
   display: block;
 }
 
-.language-shell::before {
-  content: "\f120"; /* Code Unicode pour fa-terminal */
+/* .language-shell::before {
+  content: "\f120";
   font-family: "Font Awesome 7 Free";
   font-weight: 900;
   display: block;
@@ -151,7 +155,7 @@ h2, h3, h4 {
   left: 0;
   color: #5e6fae;
   font-size: 1.2em;
-}
+} */
 
 .language-text::before {
   content: "\e163"; /* Code Unicode pour fa-terminal */
@@ -165,3 +169,17 @@ h2, h3, h4 {
   font-size: 1.2em;
 }
 
+.language-shell {
+  margin-bottom: 5px;
+}
+
+.code_filename {
+  text-align: center;
+  color: grey;
+  font-size: small;
+  text-transform: lowercase;
+  font-style: italic;
+  width:100%;
+  display: block;
+  text-align: right;
+}

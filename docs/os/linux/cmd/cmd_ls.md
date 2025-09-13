@@ -12,7 +12,7 @@ tags: [os,commandes,linux,ls]
 
 ## INFORMATION
 
-`ls` - Afficher le contenu de répertoires
+`ls` - La commande `ls` liste les fichiers et les sous-dossiers. (_ls = list_)
 
 ### Man
 
@@ -20,8 +20,6 @@ tags: [os,commandes,linux,ls]
 - [Debian](https://manpages.debian.org/bullseye/manpages-fr/ls.1.fr.html)
 - [Rocky](https://docs.rockylinux.org/fr/books/admin_guide/03-commands/#la-commande-ls)
 - [Ubuntu](https://manpages.ubuntu.com/manpages/questing/fr/man1/ls.1.html)
-
-## EXEMPLES
 
 ### Alias
 
@@ -52,6 +50,8 @@ Pour supprimer un alias ajouter, il suffit de taper :
 unalias ls
 ```
 
+## EXEMPLES
+
 ### Description des colonnes générées par l'exécution de la commande `ls -lia`
 
 <span class="code_language">Shell</span>
@@ -65,6 +65,7 @@ ls -lia /home
 ```text
 78489 drwx------ 4 rockstar rockstar 4096 25 oct. 08:10 rockstar
 ```
+
 
 |Valeur|Information|
 |:-----|:----------|
