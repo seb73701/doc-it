@@ -9,52 +9,6 @@ keywords:
 tags: [os,commandes,linux]
 ---
 
-## Liste des commandes
-
-### Commandes de base
-
-<details>
-<summary>déplier</summary>
-
-|Commandes|Actions|
-|:-------|:-------|
-|[`apt`](cmd/cmd_apt)|La commande `apt` permet de gérer les paquets Debian de votre Ubuntu.|
-|[`ccze`](cmd/cmd_ccze)||
-|[`chattr`](cmd/cmd_chattr)|Gérer les attributs des fichiers|
-|[`clear`](cmd/cmd_clear)|Effacer le contenu du terminal|
-|[`dnf`](cmd/cmd_dnf)||
-|[`exit`](cmd/cmd_exit)||
-|[`firewall-cmd`](cmd/cmd_firewall-cmd)||
-|[`ftp`, `sftp`](cmd/cmd_ftp_sftp)|Transférer des fichiers via (S)FTP|
-|[`groupadd`](cmd/cmd_groupadd)|Créer des groupes d’utilisateurs|
-|[`info`](cmd/cmd_info)|Cette commande fournit une documentation plus détaillée et structurée pour certaines commandes.|
-|[`initramfs`](cmd/cmd_initramfs)||
-|[`kill`](cmd/cmd_kill)|Cette commande permet d'arrêter un processus en cours d'exécution sur le système.|
-|[`killall`](cmd/cmd_killall)|Arrêter et terminer des processus par leur nom|
-|[`lastlog`](cmd/cmd_lastlog)||
-|[`logrotate`](cmd/cmd_logrotate)||
-|[`lsattr`](cmd/cmd_lsattr)|Afficher les attributs des fichiers|
-|[`lsb_release`](cmd/cmd_lsb_release)||
-|[`mdadm`](cmd/cmd_mdadm)||
-|[`mount`, `unmount`](cmd/cmd_mount_unmount)|Monter/démonter les systèmes de fichiers|
-|[`nc`](cmd/cmd_nc)||
-|[`pacman`](cmd/cmd_pacman)|Télécharger et gérer les paquets logiciels|
-|[`rgrep`](cmd/cmd_rgrep)||
-|[`shred`](cmd/cmd_shred)||
-|[`smartctl`](cmd/cmd_smartctl)||
-|[`ss`](cmd/cmd_ss)||
-|[`ssh`](cmd/cmd_ssh)|Se connecter à un autre ordinateur via un « shell » sécurisé|
-|[`tac`](cmd/cmd_tac)||
-|[`tree`](cmd/cmd_tree)||
-|[`ufw`](cmd/cmd_ufw)||
-|[`unlink`](cmd/cmd_unlink)||
-|[`vim`](cmd/cmd_vim)||
-|[`vmstat`](cmd/cmd_vmstat)||
-|[`whatis`](cmd/cmd_whatis)||
-|[`yum`](cmd/cmd_yum)|Télécharger et gérer les paquets logiciels sous Rocky Linux, RHEL, CentOS|
-
-</details>
-
 ## Commandes de bases sur le système de fichiers
 
 Linux permet de manipuler les fichiers et dossiers.
@@ -141,6 +95,7 @@ Très pratique pour manipuler les fichiers textes.
 |`tail`|Affiche les dernières lignes d’un fichier|
 |`tee`|Lit l’entrée standard et l’écrit à la fois dans la sortie standard et dans un ou plusieurs fichiers|
 |`tr`|Transforme une liste de caractère en une autre liste|
+|[`uniq` <i class="fa-regular fa-circle-check fa-xs"></i>](cmd/cmd_uniq)|Signale ou supprime des lignes répétées dans un fichier.|
 |`wc`|Afficher le nombre de lignes d’un fichier texte|
 
 ## Commandes de bases pour gérer les utilisateurs
