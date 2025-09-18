@@ -25,7 +25,7 @@ const FeatureList = [
   },
   {
     title: 'Bases de données',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: require('@site/static/img/db/sql-azure-svgrepo-com.svg').default,
     description: (
       <>
         Articles sur les bases de données SQL et NoSQL. Les méthodologies comme Merise et UML.
@@ -34,7 +34,7 @@ const FeatureList = [
   },
   {
     title: 'Intelligence Artificielle',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/ia/rubocop-svgrepo-com.svg').default,
     description: (
       <>
         Articles sur l'intelligence artificielle, Machine Learning, NLP, DataScience, etc.
@@ -43,7 +43,7 @@ const FeatureList = [
   },
     {
     title: 'Développement',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('@site/static/img/dev/builder-code-design-svgrepo-com.svg').default,
     description: (
       <>
         Articles sur le scripting et le développement web, sans oublier les méthodologies Agile, Scrum, UX, etc.
@@ -70,7 +70,7 @@ const FeatureList = [
   },
   {
     title: 'BigData',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/bigdata/analytics-svgrepo-com.svg').default,
     description: (
       <>
         Articles sur le BigData.
