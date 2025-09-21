@@ -9,6 +9,8 @@ keywords:
 tags: [os,commandes,linux]
 ---
 
+Source : https://manpages.ubuntu.com/manpages/noble/fr/man1/
+
 ## Commandes de bases sur le système de fichiers
 
 Linux permet de manipuler les fichiers et dossiers.

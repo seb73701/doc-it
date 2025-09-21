@@ -52,7 +52,7 @@ const FeatureList = [
   },
   {
     title: 'Système d\'exploitation',
-    Svg: require('@site/static/img/linux-svgrepo-com.svg').default,
+    Svg: require('@site/static/img/os/multiple-platforms.svg').default,
     description: (
       <>
         Articles sur les systèmes d'exploitation que ce soit sur des distributions Linux, MacOS ou bien Windows.
@@ -79,7 +79,7 @@ const FeatureList = [
   },
   {
     title: 'Cloud Computing',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/cloud/cloud-server2-svgrepo-com.svg').default,
     description: (
       <>
         Articles sur le Cloud Computing (AWS, Azure, GCP, etc.).
@@ -88,7 +88,7 @@ const FeatureList = [
   },
   {
     title: 'DevOps',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/devops/devops-toolchain.svg').default,
     description: (
       <>
         Articles sur le DevOps.
@@ -97,7 +97,7 @@ const FeatureList = [
   },
   {
     title: 'IoT',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/iot/satellite.svg').default,
     description: (
       <>
         Articles sur IoT (ChromeCast, Alexia, etc.).
@@ -124,7 +124,7 @@ const FeatureList = [
   },
   {
     title: 'Réseaux sociaux',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/socnet/conversation-svgrepo-com.svg').default,
     description: (
       <>
         Articles sur les réseaux sociaux (Facebook, X, Instagram, Youtube, LinkedIn, etc.).
@@ -133,7 +133,7 @@ const FeatureList = [
   },
   {
     title: 'Sécurité',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/secu/finger-lock-protect-svgrepo-com.svg').default,
     description: (
       <>
         Articles sur la sécurité (certificats SSL, hardening, scan de vulnérabilités, etc.).
@@ -142,7 +142,7 @@ const FeatureList = [
   },
   {
     title: 'Streaming',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/streaming/youtuber-female-svgrepo-com.svg').default,
     description: (
       <>
         Articles sur le Streaming (Disney+, Amazon Prime, Netflix, Spotify, etc.).
@@ -151,7 +151,7 @@ const FeatureList = [
   },
   {
     title: 'Supervision',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/monit/gen-heart-rate-svgrepo-com.svg').default,
     description: (
       <>
         Articles sur la supervision et sur l'observabilité (Icinga2, Zabbix, Nagios, Grafana, Prometheus, etc).
@@ -160,7 +160,7 @@ const FeatureList = [
   },
   {
     title: 'Virtualisation',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/virt/kubernetes/kubernetes-icon.svg').default,
     description: (
       <>
         Articles sur la virtualisation et la conteneurisation (VMware, VirtualBox, Vagrant, Docker, Kubernetes, etc).
