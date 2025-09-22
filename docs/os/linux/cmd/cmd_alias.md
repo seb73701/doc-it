@@ -10,9 +10,33 @@ keywords:
 tags: [os,commandes,linux,alias]
 ---
 
+----
+
+## SYNTAXE
+
+<span class="code_language">Shell</span>
+
+```shell
+alias [-p] [ NOM[=VALEUR] ... ]
+```
+
+----
+
 ## INFORMATION
 
+:::info
+
+La commande `alias` est une commande interne à Linux.
+
+:::
+
 Les alias sont des substitutions abrégées de commandes répétitives et/ou longues à taper dans la console.
+
+Sans argument ou avec l'option `-p`, `alias` affiche une liste des alias sur la sortie standard, sous une forme permettant leur réutilisation en entrées. 
+
+Avec des arguments, un `alias` est défini pour chaque `NOM` pour lequel une `VALEUR` est indiquée. 
+
+Si aucune `VALEUR` n'est indiquée, le nom et la valeur de l'`alias` sont affichés.
 
 Il est possible de définir vos alias dans deux fichiers cachés qui se trouvent dans votre **Dossier Personnel (`/home/user/`)**:
 
@@ -42,6 +66,51 @@ Il est possible de mettre plusieurs commandes dans un seul alias en séparant ch
 
 ----
 
+## OPTIONS
+
+|Options|Description|
+|:------|:----------|
+|`-p`|Affiche tous les alias dans un format réutilisable|
+
+----
+
+## VALEUR RENVOYEE
+
+Cette commande renvoie les valeurs de sortie suivantes :
+
+|Code|Descriptif|
+|:------|:---------|
+|`0`|L'exécution de la commande a abouti.|
+|`>0`|Une erreur s'est produite.|
+
+----
+
+## FICHIERS
+
+|Chemin|Descriptif|
+|:------|:---------|
+|`~/.bashrc`|Ce fichier permet la configuration lors du lancement du programme bash. (Bash Shell)|
+|`~/.zshrc`|(Zsh Shell)|
+|`~/.tcshrc`|(Tcsh Shell)|
+|`~/.config/fish/config.fish`|(Fish Shell)|
+|`~/.bash_aliases` ou `~/.aliases`|Ce fichier permet de séparer le script `.bashrc` des `alias`. Vous pouvez mettre des variables dedans qui seront chargées à chaque lancement de terminal. (Bash Shell)|
+
+----
+
+## MAN
+
+- [man](https://manpages.ubuntu.com/manpages/noble/fr/man1/)
+
+C'est possible d'avoir la page d'aide avec la commande : 
+
+<span class="code_language">Shell</span>
+
+```shell
+%nom_commande% --help
+```
+
+----
+
 ### Man
 
 - [man](https://man7.org/linux/man-pages/man1/alias.1p.html)
@@ -56,6 +125,18 @@ Il est possible de mettre plusieurs commandes dans un seul alias en séparant ch
 
 ```shell
 alias
+```
+
+<span class="code_language">Sortie</span>
+
+```shell
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias grep='grep --color=auto'
+alias l='ls -CF'
+alias la='ls -A'
+alias ll='ls -alF'
+alias ls='ls --color=auto'
 ```
 
 ----
@@ -104,7 +185,7 @@ fi
 ```
 <span class="code_filename">~/.bashrc</span>
 
-- Il ne vous reste plus qu’à lire le fichier de commandes alias :
+- Il ne vous reste plus qu’à lire le fichier de commandes `alias` :
 
 <span class="code_language">Shell</span>
 
@@ -115,7 +196,7 @@ source ~/.bash_aliases
 #### Avec `~/.bashrc`
 
 - Ouvrez le fichier `~/.bashrc` à l’aide de votre éditeur.
-- Accédez à la section "Alias definitions" (Définition de commandes alias).
+- Accédez à la section "`Alias definitions`" (Définition de commandes alias).
 - Créez-y les commandes `alias` souhaitées en renseignant les raccourcis correspondants.
 - Enregistrez le fichier, fermez-le, puis démarrez une nouvelle session.
 - Lisez une nouvelle fois le fichier de configuration. Pour ce faire, utilisez la commande suivante :

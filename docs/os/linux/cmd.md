@@ -186,7 +186,7 @@ Voici quelques commandes réseaux, très utiles pour faire un diagnostic.
 |`host`|Effectuer des résolutions DNS|
 |`hostname`|Afficher et modifier le nom de la machine|
 |`hostnamectl`|Changer définitivement le nom de la machine|
-|`ifconfig`|Lister les interfaces réseaux et afficher la configuration IP|
+|[`ifconfig` <i class="fa-regular fa-circle-check fa-xs"></i>](cmd/cmd_ifconfig)|Lister les interfaces réseaux et afficher la configuration IP|
 |`iftop`|Afficher l’utilisation réseaux par interface|
 |`ip`|Lister les interfaces réseaux et afficher la configuration IP|
 |`iptraf`|Afficher l’utilisation réseaux par interface|
