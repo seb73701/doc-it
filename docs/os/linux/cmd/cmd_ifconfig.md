@@ -215,3 +215,25 @@ Montre les détails tels que l'adresse IP, le masque de sous-réseau, et d'autre
 ```shell
 ifconfig eth0
 ```
+
+----
+
+### Afficher toutes les interfaces
+
+Par défaut, sur GNU/Linux, la commande ifconfig seule, sans option, fournit la liste et les propriétés des interfaces actives. Si l’on souhaite visualiser l’ensemble des interfaces, y compris celles qui ne sont pas actives, il faut utiliser l’option –a :
+
+<span class="code_language">Shell</span>
+
+```shell
+ifconfig -a
+```
+
+----
+
+### Ajouter une seconde adresse IP à une interface déjà configurée
+
+<span class="code_language">Shell</span>
+
+```shell
+ifconfig eth2:en1 172.18.2.39
+```

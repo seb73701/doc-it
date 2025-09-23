@@ -188,16 +188,17 @@ Voici quelques commandes réseaux, très utiles pour faire un diagnostic.
 |`hostnamectl`|Changer définitivement le nom de la machine|
 |[`ifconfig` <i class="fa-regular fa-circle-check fa-xs"></i>](cmd/cmd_ifconfig)|Lister les interfaces réseaux et afficher la configuration IP|
 |`iftop`|Afficher l’utilisation réseaux par interface|
-|`ip`|Lister les interfaces réseaux et afficher la configuration IP|
+|[`ip` <i class="fa-regular fa-circle-check fa-xs"></i>](cmd/cmd_ip)|Lister les interfaces réseaux et afficher la configuration IP|
 |`iptraf`|Afficher l’utilisation réseaux par interface|
 |`mtr`|Lancer un `traceroute` en continue et ainsi de visualiser sur quel noeud, les pertes se font.|
-|`netstat`|Afficher les connexions établies, en attente, etc|
+|[`netstat` <i class="fa-regular fa-circle-check fa-xs"></i>](cmd/cmd_netstat)|Afficher les connexions établies, en attente, etc|
 |`ngrep`|network packet analyzer – Analyser les paquets réseaux|
 |`nmap`|Effectuer des scans de ports|
 |`nslookup`|Interroger les serveurs de noms Internet de manière interactive|
-|`ping`|Ping sur un host|
+|[`ping` <i class="fa-regular fa-circle-check fa-xs"></i>](cmd/cmd_ping)|Ping sur un host|
 |`resolvectl`|Modifier les serveurs DNS, connaître la configuration DNS et vider le cache DNS|
 |`route`|Afficher ou modifier les routes|
+|[`ss` <i class="fa-regular fa-circle-check fa-xs"></i>](cmd/cmd_ss)|Afficher les connexions établies, en attente, etc|
 |`tcpdump`|Capturer et Analyser les paquets réseaux|
 |`traceroute`|Effectuer un trace route sur un host|
 
