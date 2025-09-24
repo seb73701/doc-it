@@ -363,6 +363,7 @@ PulseAudio était le système audio standard avant PipeWire.
 - https://www.malekal.com/liste-commandes-x11/
 
 Sources : 
+- https://blog.stephane-robert.info/docs/admin-serveurs/linux/reseaux/
 - https://www.ionos.fr/digitalguide/serveur/configuration/commandes-linux/
 - https://www.malekal.com/liste-des-commandes-linux/
 - https://www.malekal.com/commandes-base-linux/

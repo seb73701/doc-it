@@ -1,5 +1,6 @@
 ---
 title: cd
+description: La commande 'cd' vous permet de changer de répertoire
 hide_table_of_contents: false
 hide_title: false
 keywords:
@@ -7,7 +8,7 @@ keywords:
     - commandes
     - linux
     - cd
-tags: [os,commandes,linux,cd]
+tags: [beta,os,commandes,linux,cd]
 ---
 
 ----

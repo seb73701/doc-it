@@ -8,7 +8,7 @@ keywords:
  - commandes
  - linux
  - netstat
-tags: [os,commandes,linux,netstat,network,reseau]
+tags: [beta,os,commandes,linux,netstat,network,reseau]
 ---
 
 ----

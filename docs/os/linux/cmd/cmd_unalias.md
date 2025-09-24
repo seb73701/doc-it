@@ -1,5 +1,6 @@
 ---
 title: unalias
+description: Permet de supprimer des alias.
 hide_table_of_contents: false
 hide_title: false
 keywords:
@@ -7,7 +8,7 @@ keywords:
     - commandes
     - linux
     - unalias
-tags: [os,commandes,linux,unalias]
+tags: [beta,os,commandes,linux,unalias]
 ---
 
 ----

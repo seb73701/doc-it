@@ -1,5 +1,6 @@
 ---
 title: ip
+description: Nouvelle commande pour la gestion des adresses IP et des routes.
 hide_table_of_contents: false
 hide_title: false
 keywords:
@@ -7,7 +8,7 @@ keywords:
     - commandes
     - linux
     - ip
-tags: [os,commandes,linux,ip,reseau,network]
+tags: [beta,os,commandes,linux,ip,reseau,network]
 ---
 
 ----

@@ -1,5 +1,6 @@
 ---
 title: ls
+description: Commande POSIX qui permet de lister le contenu d'un répertoire.
 hide_table_of_contents: false
 hide_title: false
 keywords:
@@ -7,7 +8,7 @@ keywords:
     - commandes
     - linux
     - ls
-tags: [os,commandes,linux,ls]
+tags: [beta,os,commandes,linux,ls]
 ---
 
 ----

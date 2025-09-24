@@ -1,6 +1,6 @@
 ---
 title: ss
-description: ss est un outil moderne qui remplace netstat, offrant plus d'informations et étant plus rapide. Il est utilisé pour afficher des informations détaillées sur les différents sockets.
+description: Remplace 'netstat' pour afficher des statistiques sur les sockets réseau.
 hide_table_of_contents: false
 hide_title: false
 keywords:
@@ -8,7 +8,7 @@ keywords:
     - commandes
     - linux
     - ss
-tags: [os,commandes,linux,ss,network,reseau]
+tags: [beta,os,commandes,linux,ss,network,reseau]
 ---
 
 ----
@@ -26,6 +26,8 @@ ss [OPTIONS] [ FILTRE ]
 ## INFORMATION
 
 `ss` (_Socket Statistics_) est un outil moderne qui remplace `netstat`, offrant plus d'informations et étant plus rapide. Il est utilisé pour afficher des informations détaillées sur les différents sockets.
+
+Dépend du paquet : `iproute2`
 
 ----
 

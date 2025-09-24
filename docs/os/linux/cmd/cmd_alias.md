@@ -1,5 +1,6 @@
 ---
 title: alias
+description: Les 'alias' sont des substitutions abrégées de commandes répétitives et/ou longues à taper dans la console.
 hide_table_of_contents: false
 hide_title: false
 keywords:
@@ -7,7 +8,7 @@ keywords:
     - commandes
     - linux
     - alias
-tags: [os,commandes,linux,alias]
+tags: [beta,os,commandes,linux,alias]
 ---
 
 ----

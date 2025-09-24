@@ -6,7 +6,7 @@ keywords:
     - application
     - app
     - ansible
-tags: [ansible,automatisation,app,application]
+tags: [beta,ansible,automatisation,app,application]
 ---
 
 <img style={{ height: "100px" }} alt="logo" src={require('@docusaurus/useBaseUrl').default('img/logo.png')} />

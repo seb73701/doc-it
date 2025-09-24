@@ -1,5 +1,6 @@
 ---
 title: ifconfig
+description: Affiche ou configure les interfaces réseau (obsolète, mais encore utilisée).
 hide_table_of_contents: false
 hide_title: false
 keywords:
@@ -7,7 +8,7 @@ keywords:
     - commandes
     - linux
     - ifconfig
-tags: [os,commandes,linux,ifconfig,reseau,network]
+tags: [beta,os,commandes,linux,ifconfig,reseau,network]
 ---
 
 ----

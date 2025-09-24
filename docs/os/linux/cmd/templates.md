@@ -1,5 +1,6 @@
 ---
 title: _template_command
+description: vide
 hide_table_of_contents: false
 hide_title: false
 keywords:
@@ -7,7 +8,7 @@ keywords:
     - commandes
     - linux
     - _template_command
-tags: [os,commandes,linux,_template_command]
+tags: [beta,os,commandes,linux,_template_command]
 ---
 
 ----

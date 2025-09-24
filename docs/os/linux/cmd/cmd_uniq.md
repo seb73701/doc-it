@@ -1,5 +1,6 @@
 ---
 title: uniq
+description: uniq est une commande Unix qui affiche les lignes d'un fichier texte en supprimant les multiples occurrences consécutives d'une même ligne, pour n'en garder qu'une seule.
 hide_table_of_contents: false
 hide_title: false
 keywords:
@@ -7,7 +8,7 @@ keywords:
     - commandes
     - linux
     - uniq
-tags: [os,commandes,linux,uniq]
+tags: [beta,os,commandes,linux,uniq]
 ---
 
 ----
