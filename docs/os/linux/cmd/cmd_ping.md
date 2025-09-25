@@ -37,6 +37,18 @@ Par défaut la commande `ping` envoie en continue des requêtes. Pour l'arrêter
 
 ----
 
+## PACKAGE
+
+<span class="code_language">Shell</span>
+
+```shell
+apt install inetutils-ping
+# ou
+apt install iputils-ping
+```
+
+----
+
 ## OPTIONS
 
 |Options|Description|
@@ -99,7 +111,7 @@ Cette commande renvoie les valeurs de sortie suivantes :
 
 |Chemin|Descriptif|
 |:------|:---------|
-|``||
+|`/bin/ping`|Fichier Binaire|
 
 ----
 

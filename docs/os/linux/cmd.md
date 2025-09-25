@@ -200,7 +200,7 @@ Voici quelques commandes réseaux, très utiles pour faire un diagnostic.
 |`route`|Afficher ou modifier les routes|
 |[`ss` <i class="fa-regular fa-circle-check fa-xs"></i>](cmd/cmd_ss)|Afficher les connexions établies, en attente, etc|
 |`tcpdump`|Capturer et Analyser les paquets réseaux|
-|`traceroute`|Effectuer un trace route sur un host|
+|[`traceroute` <i class="fa-regular fa-circle-check fa-xs"></i>](cmd/cmd_traceroute)|Effectuer un trace route sur un host|
 
 
 ## Commandes téléchargement, transfert de fichiers
@@ -281,6 +281,7 @@ APT est une commande pour gérer les paquets sur les distributions à base de De
 
 |Commandes|Actions|
 |:--------|:------|
+|[`apt-file` <i class="fa-regular fa-circle-check fa-xs"></i>](cmd/cmd_apt-file)|Permet de retrouver à quel paquet appartient un fichier.|
 |`apt-cache`|Rechercher dans les dépôts|
 |`apt-get install`|Installer un paquet|
 |`apt-get update`|Mettre à jour le cache local des dépôts|

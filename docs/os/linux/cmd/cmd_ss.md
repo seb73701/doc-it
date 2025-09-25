@@ -31,6 +31,16 @@ Dépend du paquet : `iproute2`
 
 ----
 
+## PACKAGE
+
+<span class="code_language">Shell</span>
+
+```shell
+apt install iproute2
+```
+
+----
+
 ## OPTIONS
 
 |Options|Description|

@@ -51,6 +51,16 @@ sort file | uniq -c | sort -n
 
 ----
 
+## PACKAGE
+
+<span class="code_language">Shell</span>
+
+```shell
+apt install coreutils
+```
+
+----
+
 ## OPTIONS
 
 |Options|Description|

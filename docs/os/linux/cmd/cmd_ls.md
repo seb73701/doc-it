@@ -33,6 +33,16 @@ Les paramètres obligatoires pour les options de forme longue le sont aussi pour
 
 ----
 
+## PACKAGE
+
+<span class="code_language">Shell</span>
+
+```shell
+apt install coreutils
+```
+
+----
+
 ## OPTIONS
 
 |Options|Description|

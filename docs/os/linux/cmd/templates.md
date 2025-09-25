@@ -29,6 +29,16 @@ tags: [beta,os,commandes,linux,_template_command]
 
 ----
 
+## PACKAGE
+
+<span class="code_language">Shell</span>
+
+```shell
+apt install 
+```
+
+----
+
 ## OPTIONS
 
 |Options|Description|

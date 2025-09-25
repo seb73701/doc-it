@@ -36,6 +36,16 @@ OPTIONS := { -V[ersion] | -h[uman-readable] | -s[tatistics] | -d[etails] | -r[es
 
 ----
 
+## PACKAGE
+
+<span class="code_language">Shell</span>
+
+```shell
+apt install iproute2
+```
+
+----
+
 ## OPTIONS
 
 |Options|Description|
@@ -124,7 +134,8 @@ Cette commande renvoie les valeurs de sortie suivantes :
 
 |Chemin|Descriptif|
 |:------|:---------|
-|||
+|`/bin/ip`|Fichier binaire|
+|`/sbin/ip`|Fichier binaire|
 
 ----
 

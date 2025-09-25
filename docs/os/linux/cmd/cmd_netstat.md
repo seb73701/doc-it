@@ -34,6 +34,15 @@ netstat {-V|--version} {-h|--help}
 
 `netstat` (Network Statistics) est un outil de ligne de commande qui affiche les connexions réseau, les tables de routage, les statistiques d'interface, les connexions masquées, et les membres multicast. Bien qu'il soit moins utilisé de nos jours, remplacé en grande partie par `ss`, ses principales
 
+----
+
+## PACKAGE
+
+<span class="code_language">Shell</span>
+
+```shell
+apt install net-tools
+```
 
 ----
 
@@ -108,23 +117,24 @@ Cette commande renvoie les valeurs de sortie suivantes :
 
 |Chemin|Descriptif|
 |:------|:---------|
+|`/bin/netstat`|Fichier binaire|
 |`/etc/services`|Le fichier de correspondance des services|
+|`/proc/net/appeltalk`|informations sockets DDP (appeltalk)|
+|`/proc/net/ax25_route`|informations routage AX25 du noyau|
+|`/proc/net/ax25`|informations sockets AX25|
 |`/proc/net/dev`|informations périphériques|
+|`/proc/net/igmp`|informations multicast IGMP|
+|`/proc/net/ip_masquerade`|Connexion avec masquerade noyau|
+|`/proc/net/ipx_route`|information routage IPC du noyan|
+|`/proc/net/ipx`|informations sockets IPX|
+|`/proc/net/nr_neigh`|Voisinage NET/ROM noyau|
+|`/proc/net/nr`|informations sockets NET/ROM|
 |`/proc/net/raw`|informations sockets RAW|
+|`/proc/net/route`|information routage IP du noyau|
 |`/proc/net/tcp`|informations sockets TCP|
 |`/proc/net/udp`|informations sockets UDP|
-|`/proc/net/igmp`|informations multicast IGMP|
 |`/proc/net/unix`|informations sockets domaine UNIX|
-|`/proc/net/ipx`|informations sockets IPX|
-|`/proc/net/ax25`|informations sockets AX25|
-|`/proc/net/appeltalk`|informations sockets DDP (appeltalk)|
-|`/proc/net/nr`|informations sockets NET/ROM|
-|`/proc/net/route`|information routage IP du noyau|
-|`/proc/net/ax25_route`|informations routage AX25 du noyau|
-|`/proc/net/ipx_route`|information routage IPC du noyan|
 |`/proc/nr_nodes`|informations routage NET/ROM du noyau|
-|`/proc/net/nr_neigh`|Voisinage NET/ROM noyau|
-|`/proc/net/ip_masquerade`|Connexion avec masquerade noyau|
 
 ----
 

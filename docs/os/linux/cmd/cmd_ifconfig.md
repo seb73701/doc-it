@@ -46,6 +46,18 @@ apt apt update && install net-tools
 
 ----
 
+## PACKAGE
+
+<span class="code_language">Shell</span>
+
+```shell
+apt install net-tools
+# ou
+apt install inetutils-tools
+```
+
+----
+
 ## OPTIONS
 
 |Options|Description|
@@ -95,11 +107,13 @@ Cette commande renvoie les valeurs de sortie suivantes :
 
 |Chemin|Descriptif|
 |:------|:---------|
-|`/proc/net/socket`||
-|`/proc/net/dev`||
-|`/proc/net/if_inet6`||
+|`/bin/inetutils-ifconfig`|Fichier binaire|
 |`/etc/host`|Contient la base de données du nom d'hôte.|
 |`/etc/networks`|Contient des noms de réseau.|
+|`/proc/net/dev`||
+|`/proc/net/if_inet6`||
+|`/proc/net/socket`||
+|`/sbin/ifconfig`|Fichier binaire|
 
 ----
 
