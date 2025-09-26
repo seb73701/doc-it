@@ -88,56 +88,47 @@ apt install traceroute
 |`-A`, `--as-path-lookups`|Effectuer des recherches de chemin `AS` dans les registres de routage et imprimer les résultats directement après les adresses correspondantes.|
 |`-V`, `--version`|Afficher la version et quitter.|
 
-### There are additional options intended for advanced usage (such as alternate trace methods etc.)
+### Il existe des options supplémentaires destinées à une utilisation avancée (telles que des méthodes de traçage alternatives, etc.)
 
 |Options|Description|
 |:------|:----------|
-|`--sport=port`|Chooses the source port to use. Implies -N 1 -w 5 .  Normally source ports (if applicable) are chosen by  the  system.|
-|`--fwmark=mark`|Set the firewall mark for outgoing packets (since the Linux kernel 2.6.25).|
-|`-M method, --module=name`|Use  specified method for traceroute operations. Default traditional udp method has name default, icmp (-I) and tcp (-T) have names icmp and tcp respectively. Method-specific options can be passed by -O .  Most methods have their simple shortcuts, (-I means -M icmp, etc).|
-|`-O option, --options=options`|Specifies some method-specific option. Several options are separated by comma (or use several -O on cmdline).  Each method may have its own specific options, or many not have them at all.  To print information about  available  options, use -O help.|
-|`-U, --udp`|Use  UDP  to  particular destination port for tracerouting (instead of increasing the port per each probe). Default port is 53 (dns).|
-|`-UL`|Use UDPLITE for tracerouting (default port is 53).|
-|`-D, --dccp`|Use DCCP Requests for probes.|
-|`-P protocol, --protocol=protocol`|Use raw packet of specified protocol for tracerouting. Default protocol is 253 (rfc3692).|
-|`--mtu`|Discover MTU along the path being traced. Implies -F -N 1.  New mtu is printed once in a form of F=NUM at the first probe of a hop which requires such mtu to be reached. (Actually, the correspond "frag needed" icmp message normally is sent by the previous hop).<br/>Note, that some routers might cache once the seen information on a fragmentation. Thus you can  receive  the  final mtu  from a closer hop.  Try to specify an unusual tos by -t , this can help for one attempt (then it can be cached there as well). See -F option for more info.|
-|`--back`|Print the number of backward hops when it seems different with the forward direction. This number is guessed in assumption that remote hops send reply packets with initial ttl set to either 64, or 128 or 255 (which seems a common practice). It is printed as a negate value in a form of '-NUM' .|
+|`--sport=port`|Choisit le port source à utiliser. Implique `-N 1 -w 5`. Normalement, les ports sources (le cas échéant) sont choisis par le système.|
+|`--fwmark=mark`|Définir le marquage du pare-feu pour les paquets sortants (depuis le noyau Linux 2.6.25).|
+|`-M method`, `--module=name`|Utilisez la méthode spécifiée pour les opérations `traceroute`. La méthode `udp` traditionnelle par défaut porte le nom `default`, `icmp` (`-I`) et `tcp` (`-T`) portent respectivement les noms `icmp` et `tcp`. Les options spécifiques à la méthode peuvent être transmises par `-O` . La plupart des méthodes ont leurs raccourcis simples (`-I` signifie `-M icmp`, etc.).|
+|`-O option`, `--options=options`|Spécifie certaines options spécifiques à une méthode. Plusieurs options sont séparées par des virgules (ou utilisez plusieurs `-O` sur la ligne de commande). Chaque méthode peut avoir ses propres options spécifiques, ou n'en avoir aucune. Pour afficher des informations sur les options disponibles, utilisez `-O help`.|
+|`-U`, `--udp`|Utilisez UDP vers un port de destination particulier pour le tracerouting (au lieu d'augmenter le port pour chaque sonde). Le port par défaut est `53` (dns).|
+|`-UL`|Utilisez `UDPLITE` pour le traceroutage (le port par défaut est `53`).|
+|`-D`, `--dccp`|Utilisez les requêtes `DCCP` pour les sondes.|
+|`-P protocol`, `--protocol=protocol`|Utilisez le paquet brut du protocole spécifié pour le `traceroute`. Le protocole par défaut est `253` (rfc3692).|
+|`--mtu`|Découvrez le MTU le long du chemin tracé. Implique `-F -N 1`. Le nouveau MTU est affiché une fois sous la forme `F=NUM` lors de la première sonde d'un saut qui nécessite d'atteindre ce MTU. (En réalité, le message ICMP "`frag needed`" correspondant est normalement envoyé par le saut précédent).Notez que certains routeurs peuvent mettre en cache les informations vues lors d'une fragmentation. Vous pouvez donc recevoir le MTU final à partir d'un saut plus proche. Essayez de spécifier un `tos` inhabituel avec `-t` , cela peut aider pour une tentative (il peut alors être mis en cache là aussi). Voir l'option `-F` pour plus d'informations.|
+|`--back`|Imprimez le nombre de sauts en arrière lorsqu'il semble différent de celui en avant. Ce nombre est estimé en supposant que les sauts distants envoient des paquets de réponse avec un TTL initial défini sur `64`, `128` ou `255` (ce qui semble être une pratique courante). Il est imprimé sous forme de valeur négative sous la forme "`-NUM`".|
 
-### LIST OF AVAILABLE METHODS
+### Liste des méthodes disponibles
 
-In general, a particular traceroute method may have to be chosen by -M name, but most of the  methods  have  their  simple
-cmdline switches (you can see them after the method name, if present).
+En général, une méthode `traceroute` particulière peut devoir être choisie par `-M nom`, mais la plupart des méthodes ont leurs propres commutateurs de ligne de commande simples (vous pouvez les voir après le nom de la méthode, s'ils sont présents).
 
 |Name|Description|
 |:------|:----------|
-|`default`|The traditional, ancient method of tracerouting. Used by default. Probe  packets  are  udp datagrams with so-called "unlikely" destination ports.  The "unlikely" port of the first probe is 33434, then for each next probe it is incremented by one. Since the ports are expected to be unused, the destination  host normally  returns  "icmp  unreach port" as a final response.  (Nobody knows what happens when some application listens for such ports, though). This method is allowed for unprivileged users.|
-|`icmp       -I`|Most usual method for now, which uses icmp echo packets for probes. If you can ping(8) the destination host, icmp tracerouting is applicable as well. This method may be allowed for unprivileged users since the kernel 3.0 (IPv4, for IPv6 since  3.11),  which  supports  new dgram  icmp  (or "ping") sockets. To allow such sockets, sysadmin should provide net/ipv4/ping_group_range sysctl range to match any group of the user.<br/>Options<br/>- `raw` : Use only raw sockets (the traditional way). This way is tried first by default (for compatibility reasons), then new dgram icmp sockets as fallback.<br/>- `dgram`: Use only dgram icmp sockets.|
-|`tcp        -T`| Well-known modern method, intended to bypass firewalls. Uses the constant destination port (default is 80, http). If some filters are present in the network path, then most probably any "unlikely" udp ports (as for  default  method)  or even  icmp  echoes (as for icmp) are filtered, and whole tracerouting will just stop at such a firewall.  To bypass a network filter, we have to use only allowed protocol/port combinations. If we trace for  some,  say,  mailserver,  then  more likely -T -p 25 can reach it, even when -I can not.<br/>This  method  uses  well-known  "half-open technique", which prevents applications on the destination host from seeing our probes at all.  Normally, a tcp syn is sent. For non-listened ports we receive tcp reset, and all is done. For active listening ports we receive tcp syn+ack, but answer by tcp reset (instead of expected tcp ack), this way the remote  tcp  session is dropped even without the application ever taking notice.<br/>There is a couple of options for tcp method:<br/>- `syn,ack,fin,rst,psh,urg,ece,cwr`: Sets specified tcp flags for probe packet, in any combination.<br/>- `flags=num`: Sets the flags field in the tcp header exactly to num.<br/>- `ecn`: Send syn packet with tcp flags ECE and CWR (for Explicit Congestion Notification, rfc3168).<br/>- `sack,timestamps,window_scaling`: Use the corresponding tcp header option in the outgoing probe packet.<br/>- `sysctl`: Use  current  sysctl (/proc/sys/net/*) setting for the tcp header options above and ecn.  Always set by default, if nothing else specified.<br/>- `fastopen`: Use fastopen tcp option (when syn), for initial cookie negotiation only.<br/>- `mss=[num]`: Use value of num (or unchanged) for maxseg tcp header option (when syn), and discover its clamping along  the  path being  traced.   New  changed  mss  is printed once in a form of M=NUM at the first probe on which it was detected. Note, some routers may return too short original fragment in the time exceeded message, making the  check  impossible. Besides  that the responses may come in a different order.  All this can lead to a later place of the report (using -N 1 can help for the order).<br/>- `info`: Print tcp flags and supported options of final tcp replies when the target host is reached.   Allows  to  determine whether  an application listens the port and other useful things.  Supported tcp options are all that can be set by -T -O, ie. mss, sack, timestamps, window_scaling and fastopen, with the similar output format (a value for mss and just presence for others). Default options is syn,sysctl.|
-|`tcpconn`|An initial implementation of tcp method, simple using connect(2) call, which does full tcp  session  opening.  Not  recommended for normal use, because a destination application is always affected (and can be confused).|
-|`udp        -U`|Use udp datagram with constant destination port (default 53, dns).<br/>Intended to bypass firewall as well.<br/>Note, that unlike in tcp method, the correspond application on the destination host always receive our probes (with random data), and most can easily be confused by them. Most cases it will not respond to our packets though, so we will never see the final hop in the trace. (Fortunately, it seems that at least dns servers replies with something angry). This method is allowed for unprivileged users.|
-|`udplite    -UL`|Use udplite datagram for probes (with constant destination port, default 53). This method is allowed for unprivileged users.<br/>Options:<br/>- `coverage=num`: Set udplite send coverage to num.|
-|`dccp    -D`|Use DCCP Request packets for probes (rfc4340). This method uses the same "half-open technique" as used for TCP. The default destination port is 33434.<br/>Options:<br/>- `service=num`: Set DCCP service code to num (default is 1885957735).|
-|`raw        -P proto`|Send raw packet of protocol proto. No protocol-specific headers are used, just IP header only. Implies -N 1 -w 5.<br/>Options:<br/>- `protocol=proto`: Use IP protocol proto (default 253).|
+|`default`|La méthode traditionnelle et ancienne du `traceroute`. Utilisée par défaut. Les paquets de sondage sont des datagrammes UDP avec des ports de destination dits "improbables" (unlikely). Le port "improbable" (unlikely) de la première sonde est `33434`, puis il est incrémenté d'une unité pour chaque sonde suivante. Comme les ports sont censés être inutilisés, l'hôte de destination renvoie normalement "`icmp unreach port`" comme réponse finale. (Personne ne sait toutefois ce qui se passe lorsqu'une application écoute ces ports). Cette méthode est autorisée pour les utilisateurs non privilégiés.|
+|`icmp`, `-I`|Méthode la plus courante à l'heure actuelle, qui utilise des paquets icmp `echo` pour les sondes. Si vous pouvez `ping`(8) l'hôte de destination, le tracerouting icmp est également applicable. Cette méthode peut être autorisée pour les utilisateurs non privilégiés depuis le noyau 3.0 (IPv4, pour IPv6 depuis 3.11), qui prend en charge les nouveaux sockets `dgram icmp` (ou « ping »). Pour autoriser ces sockets, l'administrateur système doit fournir une plage `sysctl net/ipv4/ping_group_range` correspondant à n'importe quel groupe d'utilisateurs.<br/>Options<br/>- `raw` : utilise uniquement les sockets raw (méthode traditionnelle). Cette méthode est essayée en premier par défaut (pour des raisons de compatibilité), puis les nouvelles sockets dgram icmp sont utilisées en secours.<br/>- `dgram` : utilise uniquement les sockets dgram icmp.|
+|`tcp`, `-T`|Méthode moderne bien connue, destinée à contourner les pare-feu. Utilise le port de destination constant (la valeur par défaut est `80`, `http`). Si certains filtres sont présents dans le chemin réseau, alors très probablement tous les ports udp "improbables" (unlikely)(comme pour la méthode par défaut) ou même les échos icmp (comme pour icmp) sont filtrés, et tout le tracerouting s'arrêtera simplement à ce pare-feu. Pour contourner un filtre réseau, nous devons utiliser uniquement les combinaisons protocole/port autorisées. Si nous traçons, par exemple, un serveur de messagerie, il est plus probable que `-T -p 25` puisse l'atteindre, même lorsque `-I` ne le peut pas.<br/>Cette méthode utilise la "technique semi-ouverte" bien connue, qui empêche les applications sur l'hôte de destination de voir nos sondes. Normalement, un `tcp syn` est envoyé. Pour les ports non écoutés, nous recevons un `tcp reset`, et tout est terminé. Pour les ports d'écoute actifs, nous recevons un `tcp syn+ack`, mais nous répondons par un `tcp reset` (au lieu du `tcp ack` attendu), de cette façon, la session tcp distante est abandonnée sans même que l'application ne s'en aperçoive.<br/>Il existe plusieurs options pour la méthode tcp :<br/>- `syn,ack`,`fin`,`rst`,`psh`,`urg`,`ece`,`cwr` : définit les indicateurs tcp spécifiés pour le paquet de sonde, dans n'importe quelle combinaison.<br/>- `flags=num` : définit le champ des indicateurs dans l'en-tête tcp exactement à `num`.<br/>- `ecn` : envoie un paquet `syn` avec les indicateurs `TCP ECE` et `CWR` (pour Explicit Congestion Notification, rfc3168).<br/>- `sack`,`timestamps`,`window_scaling` : utilise l'option d'en-tête TCP correspondante dans le paquet de sonde sortant.<br/>- `sysctl` : utilise le paramètre `sysctl (/proc/sys/net/*)` actuel pour les options d'en-tête TCP ci-dessus et `ecn`. Toujours défini par défaut, sauf indication contraire.<br/>- `fastopen` : utilise l'option TCP `fastopen` (lors de `syn`), uniquement pour la négociation initiale du cookie.<br/>- `mss=[num]` : utilise la valeur de `num` (ou inchangée) pour l'option d'en-tête TCP `maxseg` (lors de `syn`) et découvre son clamping le long du chemin tracé. Le nouveau `mss` modifié est imprimé une fois sous la forme `M=NUM` lors de la première sonde sur laquelle il a été détecté. Notez que certains routeurs peuvent renvoyer un fragment original trop court dans le message de dépassement de délai, rendant la vérification impossible. En outre, les réponses peuvent arriver dans un ordre différent. Tout cela peut entraîner un emplacement plus tardif du rapport (l'utilisation de `-N 1` peut aider pour l'ordre).<br/>- `info` : imprime les indicateurs TCP et les options prises en charge des réponses TCP finales lorsque l'hôte cible est atteint. Permet de déterminer si une application écoute le port et d'autres informations utiles. Les options TCP prises en charge sont toutes celles qui peuvent être définies par `-T -O`, c'est-à-dire `mss`, `sack`, `timestamps`, `window_scaling` et `fastopen`, avec un format de sortie similaire (une valeur pour `mss` et simplement la présence pour les autres). Les options par défaut sont `syn`,`sysctl`.|
+|`tcpconn`|Une implémentation initiale de la méthode tcp, simple utilisant l'appel `connect`(2), qui ouvre complètement la session tcp. Non recommandée pour une utilisation normale, car l'application de destination est toujours affectée (et peut être perturbée).|
+|`udp`, `-U`|Utilisez un datagramme UDP avec un port de destination constant (par défaut `53`, `DNS`).<br/>Conçu pour contourner également le pare-feu.<br/>Notez que, contrairement à la méthode `tcp`, l'application correspondante sur l'hôte de destination reçoit toujours nos sondes (avec des données aléatoires), et la plupart peuvent facilement être déroutées par celles-ci. Dans la plupart des cas, elle ne répondra toutefois pas à nos paquets, nous ne verrons donc jamais le dernier saut dans la trace. (Heureusement, il semble qu'au moins les serveurs dns répondent avec quelque chose de furieux).<br/>Cette méthode est autorisée pour les utilisateurs non privilégiés.|
+|`udplite`, `-UL`|Utilisez le datagramme `udplite` pour les sondes (avec un port de destination constant, par défaut `53`). Cette méthode est autorisée pour les utilisateurs non privilégiés.<br/>Options :<br/>- `coverage=num` : définit la couverture d'envoi `udplite` sur `num`.|
+|`dccp`, `-D`|Utilisez les paquets de requête DCCP pour les sondes (rfc4340). Cette méthode utilise la même "technique semi-ouverte" que celle utilisée pour TCP. Le port de destination par défaut est `33434`.<br/>Options :<br/>- `service=num` : définit le code de service DCCP sur `num` (la valeur par défaut est `1885957735`).|
+|`raw`, `-P proto`|Envoie un paquet brut du protocole `proto`. Aucune en-tête spécifique au protocole n'est utilisée, uniquement l'en-tête IP. Implique `-N 1 -w 5`.<br/>Options :<br/>- `protocol=proto` : utilise le protocole IP `proto` (valeur par défaut `253`).|
 
 ### NOTES
-To  speed  up work, normally several probes are sent simultaneously.  On the other hand, it creates a "storm of packages",
-especially in the reply direction. Routers can throttle the rate of icmp responses, and some of replies can  be  lost.  To
-avoid  this,  decrease the number of simultaneous probes, or even set it to 1 (like in initial traceroute implementation),
-i.e.  -N 1
 
-The final (target) host can drop some of the simultaneous probes, and might even answer only the latest ones. It can  lead
-to extra "looks like expired" hops near the final hop. We use a smart algorithm to auto-detect such a situation, but if it
-cannot help in your case, just use -N 1 too.
+Pour accélérer le travail, plusieurs sondes sont généralement envoyées simultanément. D'un autre côté, cela crée une "tempête de paquets", en particulier dans le sens de la réponse. Les routeurs peuvent limiter le débit des réponses icmp, et certaines réponses peuvent être perdues. Pour éviter cela, réduisez le nombre de sondes simultanées, ou même réglez-le sur `1` (comme dans la mise en œuvre initiale de `traceroute`), c'est-à-dire `-N 1`
 
-For even greater stability you can slow down the program's work by -z option, for example use -z 0.5 for half-second pause
-between probes.
+L'hôte final (cible) peut rejeter certaines des sondes simultanées et peut même ne répondre qu'aux dernières. Cela peut entraîner des sauts supplémentaires "semblant expirés" près du saut final. Nous utilisons un algorithme intelligent pour détecter automatiquement une telle situation, mais si cela ne vous aide pas dans votre cas, utilisez simplement `-N 1` également.
 
-To  avoid an extra waiting, we use adaptive algorithm for timeouts (see -w option for more info). It can lead to premature
-expiry (especially when response times differ at times) and printing "*" instead of a time. In such a  case,  switch  this
-algorithm off, by specifying -w with the desired timeout only (for example, -w 5).
+Pour une stabilité encore plus grande, vous pouvez ralentir le travail du programme à l'aide de l'option `-z`, par exemple en utilisant `-z 0,5` pour une pause d'une demi-seconde entre les sondes.
 
-If some hops report nothing for every method, the last chance to obtain something is to use ping -R command (IPv4, and for
-nearest 8 hops only).
+Pour éviter une attente supplémentaire, nous utilisons un algorithme adaptatif pour les délais d'expiration (voir l'option `-w` pour plus d'informations). Cela peut entraîner une expiration prématurée (en particulier lorsque les temps de réponse varient) et l'affichage de "`*`" à la place d'un temps. Dans ce cas, désactivez cet algorithme en spécifiant `-w` avec le délai d'expiration souhaité uniquement (par exemple, `-w 5`).
+
+Si certains sauts ne rapportent rien pour chaque méthode, la dernière chance d'obtenir quelque chose est d'utiliser la commande `ping -R` (IPv4, et pour les 8 sauts les plus proches uniquement).
 
 ----
 
@@ -162,14 +153,14 @@ Cette commande renvoie les valeurs de sortie suivantes :
 
 ## MAN
 
-- [man](https://manpages.ubuntu.com/manpages/noble/fr/man1/)
+- [man](https://linux.die.net/man/8/traceroute)
 
 C'est possible d'avoir la page `man` avec la commande : 
 
 <span class="code_language">Shell</span>
 
 ```shell
-man %nom_commande%
+man traceroute
 ```
 
 ou
@@ -177,7 +168,7 @@ ou
 <span class="code_language">Shell</span>
 
 ```shell
-%nom_commande% --help
+traceroute --help
 ```
 
 ----
@@ -210,13 +201,18 @@ traceroute to google.fr (142.250.178.131), 30 hops max, 60 byte packets
 <span class="code_language">Shell</span>
 
 ```shell
-traceroute 
+traceroute 1.1.1.1
 ```
 
 <span class="code_language">Sortie</span>
 
 ```text
-
+traceroute to 1.1.1.1 (1.1.1.1), 30 hops max, 60 byte packets
+ 1  172.22.224.1 (172.22.224.1)  0.427 ms  0.375 ms  0.366 ms
+ 2  GEN8 (192.168.1.1)  0.874 ms  1.086 ms  0.847 ms
+ 3  * * *
+ 4  158.254.69.86.rev.sfr.net (86.69.254.158)  6.612 ms  6.604 ms  6.598 ms
+ 5  one.one.one.one (1.1.1.1)  6.592 ms  7.424 ms  6.903 ms
 ```
 
 ----
@@ -241,3 +237,6 @@ Cela signifie que le routeur n'a pas répondu à la demande dans le délai maxim
 
 Sources : 
 - https://serverspace.io/fr/support/help/traceroute-to-trace-network-in-linux-instruction/
+- https://www.ibm.com/docs/fr/aix/7.3.0?topic=analysis-traceroute-command
+- http://ptrau.free.fr/internet/cours-reseau/traceroute-linux.htm
+- https://www.it-connect.fr/quest-ce-que-le-traceroute/
