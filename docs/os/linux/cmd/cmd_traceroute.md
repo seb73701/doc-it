@@ -234,8 +234,19 @@ Cela signifie que les paquets de données ont cessé de circuler à l'intérieur
 
 Cela signifie que le routeur n'a pas répondu à la demande dans le délai maximum alloué de deux secondes. Cela pourrait également signifier que le routeur dans le saut n'était pas configuré pour fournir une réponse à une demande de `traceroute`. Cependant, cela ne signifie pas nécessairement que le paquet a été abandonné. Pour vérifier s'il y a eu une perte de paquets, vous pouvez faire un `ping` sur l'adresse IP du routeur où vous voyez l'astérisque.
 
+----
 
-Sources : 
+## ERREURS
+
+### SO_BINDTODEVICE XXX : No such device
+
+```shell
+ping -I eth1 www.google.fr
+ping: SO_BINDTODEVICE eth1: No such device
+```
+
+## LINKS
+
 - https://serverspace.io/fr/support/help/traceroute-to-trace-network-in-linux-instruction/
 - https://www.ibm.com/docs/fr/aix/7.3.0?topic=analysis-traceroute-command
 - http://ptrau.free.fr/internet/cours-reseau/traceroute-linux.htm

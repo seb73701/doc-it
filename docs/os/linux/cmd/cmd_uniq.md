@@ -337,8 +337,9 @@ I, 3
 Thanks., 1
 ```
 
+----
 
-## Autres exemples
+## LINKS
 
 - https://www.redhat.com/en/blog/uniq-command-lists
 - https://labex.io/fr/tutorials/linux-linux-uniq-command-duplicate-filtering-219199
