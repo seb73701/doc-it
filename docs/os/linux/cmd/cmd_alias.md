@@ -8,22 +8,20 @@ keywords:
     - commandes
     - linux
     - alias
-tags: [beta,os,commandes,linux,alias]
+tags: [os,commandes,linux,alias]
 ---
 
 ----
 
-## SYNTAXE
+## INFORMATION
 
-<span class="code_language">Shell</span>
+`alias` — définir ou afficher des alias
 
-```shell
-alias [-p] [ NOM[=VALEUR] ... ]
-```
+Les `alias` sont des substitutions abrégées de commandes répétitives et/ou longues à taper dans la console.
 
 ----
 
-## INFORMATION
+## PACKAGE
 
 :::info
 
@@ -31,96 +29,19 @@ La commande `alias` est une commande interne à Linux.
 
 :::
 
-Les alias sont des substitutions abrégées de commandes répétitives et/ou longues à taper dans la console.
-
-Sans argument ou avec l'option `-p`, `alias` affiche une liste des alias sur la sortie standard, sous une forme permettant leur réutilisation en entrées. 
-
-Avec des arguments, un `alias` est défini pour chaque `NOM` pour lequel une `VALEUR` est indiquée. 
-
-Si aucune `VALEUR` n'est indiquée, le nom et la valeur de l'`alias` sont affichés.
-
-Il est possible de définir vos alias dans deux fichiers cachés qui se trouvent dans votre **Dossier Personnel (`/home/user/`)**:
-
-- `~/.bashrc` (Bash shell)
-- `~/.zshrc` (Zsh shell)
-- `~/.tcshrc` (Tcsh shell)
-- `~/.config/fish/config.fish` (Fish shell) 
-- `~/.bash_aliases`. Si ce dernier n'existe pas, créez-le. Quelques shells stockent les alias dans un autre fichier qui est `~/.aliases`
-
-:::tip
-
-Pour éviter de modifier trop souvent le fichier sensible qu'est `~/.bashrc`, il est conseillé d'utiliser le fichier `~/.bash_aliases`.
-
-:::
-
-:::info
-
-Il est à noter que l'autocomplétion fonctionne également avec les alias.
-
-:::
-
-:::note
-
-Il est possible de mettre plusieurs commandes dans un seul alias en séparant chaque commande par un point-virgule (`;`). Exemple : `alias test='clear; ls'`.
-
-:::
-
-----
-
-## OPTIONS
-
-|Options|Description|
-|:------|:----------|
-|`-p`|Affiche tous les alias dans un format réutilisable|
-
-----
-
-## VALEUR RENVOYEE
-
-Cette commande renvoie les valeurs de sortie suivantes :
-
-|Code|Descriptif|
-|:------|:---------|
-|`0`|L'exécution de la commande a abouti.|
-|`>0`|Une erreur s'est produite.|
-
-----
-
-## FICHIERS
-
-|Chemin|Descriptif|
-|:------|:---------|
-|`~/.bashrc`|Ce fichier permet la configuration lors du lancement du programme bash. (Bash Shell)|
-|`~/.zshrc`|(Zsh Shell)|
-|`~/.tcshrc`|(Tcsh Shell)|
-|`~/.config/fish/config.fish`|(Fish Shell)|
-|`~/.bash_aliases` ou `~/.aliases`|Ce fichier permet de séparer le script `.bashrc` des `alias`. Vous pouvez mettre des variables dedans qui seront chargées à chaque lancement de terminal. (Bash Shell)|
-
 ----
 
 ## MAN
 
-- [man](https://manpages.ubuntu.com/manpages/noble/fr/man1/)
-
-C'est possible d'avoir la page d'aide avec la commande : 
-
-<span class="code_language">Shell</span>
-
-```shell
-%nom_commande% --help
-```
-
-----
-
-### Man
-
-- [man](https://man7.org/linux/man-pages/man1/alias.1p.html)
+- [man](man/cmd_alias_man.md)
 
 ----
 
 ## EXEMPLES
 
 ### Lister les alias
+
+<details>
 
 <span class="code_language">Shell</span>
 
@@ -140,9 +61,13 @@ alias ll='ls -alF'
 alias ls='ls --color=auto'
 ```
 
+</details>
+
 ----
 
 ### Créer un alias temporaire
+
+<details>
 
 :::info
 
@@ -164,9 +89,13 @@ Utiliser l'alias :
 ll /home/
 ```
 
+</details>
+
 ----
 
 ### Créer un alias permanent
+
+<details>
 
 Pour utiliser une commande `alias` avec Linux de manière permanente, deux possibilités s’offrent à vous, toutes deux ne nécessitant rien de plus qu’un éditeur.
 
@@ -208,9 +137,13 @@ source ~/.bash_aliases
 source ~/.bashrc
 ```
 
+</details>
+
 ----
 
 ### Création d'un alias pour mettre à jour le système
+
+<details>
 
 - Ouvrez le fichier `~/.bash_aliases` à l’aide de votre éditeur.
 - Insérer la ligne ci-dessous :
@@ -231,9 +164,13 @@ alias up="sudo apt update && sudo apt upgrade"
 source ~/.bashrc
 ```
 
+</details>
+
 ----
 
 ### Création d'un alias pour accéder à un répertoire
+
+<details>
 
 - Ouvrez le fichier `~/.bash_aliases` à l’aide de votre éditeur.
 - Insérer la ligne ci-dessous :
@@ -254,9 +191,13 @@ alias des="cd ~/Desktop"
 source ~/.bashrc
 ```
 
+</details>
+
 ----
 
 ### Autes exemples d'alias possibles
+
+<details>
 
 ```shell
 alias update='sudo apt-get update'
@@ -301,9 +242,13 @@ alias authlog="sudo tail -f /var/log/auth.log"
 ```
 <span class="code_filename">~/.bash_aliases</span>
 
+</details>
+
 ----
 
 ### Alias avec `sudo`
+
+<details>
 
 Par défaut les `alias` ne sont pas accessibles quand vous utilisez `sudo`, un exemple courant est de lister un répertoire système :
 
@@ -324,9 +269,13 @@ sudo='sudo '
 ```
 <span class="code_filename">~/.bash_aliases</span>
 
+</details>
+
 ----
 
 ### Appeler un script
+
+<details>
 
 Il est possible d'appeler un script avec un `alias`.
 
@@ -337,9 +286,13 @@ alias monscript='sh -c /home/$USER/Documents/scripts/test/essai.sh'
 ```
 <span class="code_filename">~/.bash_aliases</span>
 
+</details>
+
 ----
 
 ### Echapper un alias
+
+<details>
 
 Lorsque l'on a créé une longue liste d'alias, il peut être utile de lancer une commande sans que celui-ci n'intervienne.
 
@@ -361,10 +314,17 @@ Et vous souhaitez lancer la commande `ping` sans les options définies dans l'`a
 \ping
 ```
 
+</details>
+
 ----
 
 ### Supprimer un alias
 
+<details>
+
 Pour supprimer un `alias`, il est possible d'utiliser la commande `unalias`.
 
 Voir cette page : [`unalias`](cmd_unalias)
+
+</details>
+

@@ -21,6 +21,8 @@ tags: [os,commandes,linux,ping,network,reseau,man]
 
 ## SYNOPSIS
 
+<span class="code_language">Shell</span>
+
 ```shell
 ping [-aAbBdDefhLnOqrRUvV46] [-c nombre] [-F flowlabel] [-i intervalle] [-I interface] [-l préchargement]
     [-m marque] [-M pmtudisc_option] [-N nodeinfo_option] [-w échéance] [-W délai] [-p motif] [-Q tos]
@@ -186,6 +188,26 @@ Avec la version s20150815, le binaire `ping6` disparait. Il a été fusionné à
 ## DISPONIBILITÉ
 
 `ping` fait partie du paquet `iputils`.
+
+----
+
+## FICHIERS
+
+|Chemin|Descriptif|
+|:------|:---------|
+|`/bin/ping`|Fichier Binaire|
+
+----
+
+## VALEUR RENVOYEE
+
+Cette commande renvoie les valeurs de sortie suivantes :
+
+|Code|Descriptif|
+|:------|:---------|
+|`0`|L'exécution de la commande a abouti.|
+|`1`|Ping ne reçoit aucun paquet en réponse.|
+|`2`|Erreur|
 
 ----
 

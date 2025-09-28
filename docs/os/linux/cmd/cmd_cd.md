@@ -8,22 +8,16 @@ keywords:
     - commandes
     - linux
     - cd
-tags: [beta,os,commandes,linux,cd]
+tags: [os,commandes,linux,cd]
 ---
 
-----
-
-## SYNTAXE
-
-<span class="code_language">Shell</span>
-
-```shell
-cd [-L|[-P [-e]] [-@]] [dir]
-```
-
-----
-
 ## INFORMATION
+
+`cd` - La commande `cd` vous permet de changer de répertoire (_cd = change directory_).
+
+----
+
+## PACKAGE
 
 :::info
 
@@ -31,89 +25,19 @@ La commande `cd` est une commande interne à Linux.
 
 :::
 
-`cd` - La commande `cd` vous permet de changer de répertoire (_cd = change directory_).
-
-Quand on ouvre un terminal en mode utilisateur on est dans notre répertoire personnel (`/home/utilisateur`). La commande est équivalente à `cd $HOME` 
-
-Si `dir` contient '`-`', le chemin précédent est stocké dans la variable `$OLDPWD`.
-
-Cette commande doit impérativement respecter les majuscules et les minuscules (sensible à la casse). 
-
-Au moment de la saisie, vous pouvez utiliser des <u>chemins relatifs</u> qui se rapportent à la hiérarchie des sous-répertoires et qui mènent directement de votre chemin au chemin supérieur. Il est également possible d’opter pour un <u>chemin absolu</u>, pour accéder immédiatement à une destination pouvant être plus éloignée. 
-
-La commande s’exécute à la condition que le répertoire indiqué existe et que vous disposiez de droits d’accès à celui-ci. Dans le cas contraire, vous recevez un message d’erreur et restez dans le répertoire de travail précédent.
-
-Il est possible d'utiliser la touche <kbd>TAB</kbd> pour l'autocomplétion.
-
-La variable `CDPATH` définit le chemin de rechercher du répertoire contenant `dir`.
-
-Les autres répertoires de `CDPATH` sont séparés par des caractères deux points (`:`). 
-
-Si le `dir` n'est pas trouvé et si l'option de shell `cdable_vars` est définie, `bash` essaiera d'utiliser `dir` comme un nom de variable. Si cette variable contient une valeur, celle-ci deviendra le nouveau répertoire de travail courant.
-
-Si `dir` commence avec un slash (`/`) alors `CDPATH` n'est pas utilisé.
-
-----
-
-## OPTIONS
-
-|Options|Description|
-|:------|:----------|
-|`-P`|Utilise la structure physique des répertoires au lieu de suivre les lieux symboliques.|
-|`-L`|Suit les liens symboliques.|
-|`-e`|Si l'option `-P` est fournie et que le répertoire de travail actuel ne peut pas être déterminé avec succès, quitter avec un statut différent de zéro.|
-|`-@`|Sur les systèmes qui le prennent en charge, présenter un fichier avec des attributs étendus comme un répertoire contenant les attributs du fichier|
-
-Par défaut, les liens symboliques sont suivis, comme si l'option `-L` avait été spécifiée. `..` est traité en supprimant le composant de chemin immédiatement précédent jusqu'à la barre oblique ou le début de `dir`.
-
-----
-
-## VALEUR RENVOYEE
-
-Cette commande renvoie les valeurs de sortie suivantes :
-
-|Code|Descriptif|
-|:------|:---------|
-|`0`|L'exécution de la commande a abouti.|
-|`>0`|Une erreur s'est produite.|
-
-Renvoie `0` si le répertoire est modifié et si `$PWD` est défini avec succès lorsque `-P` est utilisé; sinon, renvoie une valeur différente de zéro.
-
-----
-
-## FICHIERS
-
-|Chemin|Descriptif|
-|:------|:---------|
-|`cd:`|La commande `cd` est une commande interne.|
-
 ----
 
 ## MAN
 
-- [man](https://man7.org/linux/man-pages/man1/cd.1p.html)
-
-C'est possible d'avoir la page `man` avec la commande : 
-
-<span class="code_language">Shell</span>
-
-```shell
-man cd
-```
-
-ou
-
-<span class="code_language">Shell</span>
-
-```shell
-cd --help
-```
+- [Page man (interne)](man/cmd_cd_man)
 
 ----
 
 ## EXEMPLES
 
 ### Accéder immédiatement à votre répertoire personnel
+
+<details>
 
 <span class="code_language">Shell</span>
 
@@ -127,9 +51,13 @@ ou utiliser la commande :
 cd
 ```
 
+</details>
+
 ----
 
 ### Accès direct au répertoire racine
+
+<details>
 
 <span class="code_language">Shell</span>
 
@@ -137,9 +65,13 @@ cd
 cd /
 ```
 
+</details>
+
 ----
 
 ### Accès au sous-répertoire `/usr/local`.
+
+<details>
 
 <span class="code_language">Shell</span>
 
@@ -147,9 +79,13 @@ cd /
 cd /usr/local
 ```
 
+</details>
+
 ----
 
 ### Accéder à votre répertoire de travail précédent
+
+<details>
 
 <span class="code_language">Shell</span>
 
@@ -157,9 +93,13 @@ cd /usr/local
 cd -
 ```
 
+</details>
+
 ----
 
 ### Changer de répertoire vers le répertoire parent (double points)
+
+<details>
 
 <span class="code_language">Shell</span>
 
@@ -167,9 +107,13 @@ cd -
 cd ..
 ```
 
+</details>
+
 ----
 
 ### Changer vers un répertoire avec des espaces
+
+<details>
 
 Linux supporte les répertoires avec des espaces même s’il n’est pas vraiment recommandés d’en utiliser.
 
@@ -199,9 +143,13 @@ Une autre syntaxe consiste à utiliser un **backward slash** (`\`) avant l’esp
 cd Important\ Documents
 ```
 
+</details>
+
 ----
 
 ### Comment faire en sorte que le `cd` ne suive pas les liens symboliques
+
+<details>
 
 Par défaut, la commande `cd` suit les liens symboliques. on a un lien symbolique nommé **symlink** qui pointe vers le répertoire `/home/howtoforge/Desktop/symbolic`.
 
@@ -235,9 +183,13 @@ pwd
 /home/howtoforge/Desktop/symbolic
 ```
 
+</details>
+
 ----
 
-### Utilisation du CDPATH
+### Utilisation du `CDPATH`
+
+<details>
 
 La variable d'environnement `CDPATH` peut être utilisée pour définir le répertoire de base pour la commande `cd`.
 
@@ -280,3 +232,5 @@ pwd
 ```text
 /home/howtoforge/Desktop
 ```
+
+</details>

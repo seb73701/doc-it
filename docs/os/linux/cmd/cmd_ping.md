@@ -13,16 +13,6 @@ tags: [beta,os,commandes,linux,ping,network,reseau]
 
 ----
 
-## SYNTAXE
-
-<span class="code_language">Shell</span>
-
-```shell
-ping [-aAbBdCDfhHLnOqrRUvV346] [-c nombre] [-e identifiant] [-F flowlabel] [-i intervalle] [-I interface] [-l préchargement] [-m marque] [-M pmtudisc_option] [-N nodeinfo_option] [-w échéance] [-W délai] [-p motif] [-Q tos] [-s taille_paquet] [-S tampon_émission] [-t ttl] [-T horodatage option] [saut...] {destination}
-```
-
-----
-
 ## INFORMATION
 
 `ping`(_Packet INternet Groper_) – Envoyer un `ECHO_REQUEST` ICMP aux hôtes du réseau.
@@ -48,34 +38,6 @@ apt install inetutils-ping
 # ou
 apt install iputils-ping
 ```
-
-</details>
-
-----
-
-## VALEUR RENVOYEE
-
-<details>
-
-Cette commande renvoie les valeurs de sortie suivantes :
-
-|Code|Descriptif|
-|:------|:---------|
-|`0`|L'exécution de la commande a abouti.|
-|`1`|Ping ne reçoit aucun paquet en réponse.|
-|`2`|Erreur|
-
-</details>
-
-----
-
-## FICHIERS
-
-<details>
-
-|Chemin|Descriptif|
-|:------|:---------|
-|`/bin/ping`|Fichier Binaire|
 
 </details>
 
@@ -350,6 +312,12 @@ Pour chaque `ECHO_REQUEST` envoyé, un point "`.`" est affiché, tandis que pour
 :::
 
 </details>
+
+----
+
+## ERREURS
+
+
 
 ----
 
