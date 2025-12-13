@@ -65,3 +65,63 @@ Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 ZeroDivisionError: integer division or modulo by zero
 ```
+
+---
+
+## ValueError: invalid literal for int() with base 10
+
+Cette erreur intervient lorque l'on tente de faire une convertion d'une chaîne de caractères en entier.
+
+```python
+>>> int('99 bouteuilles de bières')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: invalid literal for int() with base 10: '99 bouteuilles de bières'
+```
+
+Cette erreur intervient lorque l'on tente de faire une convertion d'une chaîne de caractères vide en entier.
+
+```python
+>>> int('')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: invalid literal for int() with base 10: ''
+```
+
+Ce message peut aussi apparaître lorsque l'on tente une convertion d'une chaîne contenant des points décimaux ou des exposants.
+
+```python
+>>> int('98.6')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: invalid literal for int() with base 10: '98.6'
+```
+
+```python
+>>> int('1.0e4')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: invalid literal for int() with base 10: '1.0e4'
+```
+
+---
+
+## titre
+
+Cette erreur intervient lorque l'on tente de faire 
+
+```python
+
+```
+
+---
+
+## titre
+
+Cette erreur intervient lorque l'on tente de faire 
+
+```python
+
+```
+
+---

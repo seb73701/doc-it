@@ -209,8 +209,6 @@ libmp3lame0: /usr/share/doc/libmp3lame0/copyright
 
 </details>
 
-----
-
 ## ARTICLES
 
-- [Lien](articles/cmd_apt-file_art)
+- [Lien](#)
